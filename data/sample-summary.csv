@@ -1,0 +1,12 @@
+Type,# samples,Status,Description,Location
+Exon capture,299,Complete,1400 exon capture; goal is for all murine species (~350 more plus 20-30 other murid genera),Kevin's lab
+Exome,48,Complete,Across murinae; used in Emily's paper,Kevin's lab; Gregg
+Exome,40,Complete,Focused on Pseudomys division,Kevin's lab; Carl
+Exome,9,Complete,Mus samples from Jeff's 2017 paper (+1 for musculus),Jeff's lab
+Exome,87,In progress,Across murinae; 73 currently being captured,Jeff's lab
+Exome,19,To add,Bunomys radiation,Most tissues or extracts with Kevin or Jake; a few to request
+Exome,5 to 10,To add,Non-murine muridae,Tissues to request; some at MV or LSU
+Genome,11,Complete,Publically available genomes,Ensembl; NCBI; Gregg
+Genome,6,Complete,Mostly African murinae,Mike Lampson and Mia Levine at UPenn; Gregg
+Genome,2,Complete,Mastacomys and Pseudomys,Kevin's lab
+Genome,9,Proposed,Body size/longevity contrasts; convergence,Samples somewhere

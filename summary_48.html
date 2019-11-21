@@ -1,0 +1,155 @@
+
+<!doctype html>
+    <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98263199-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-98263199-2');
+    </script> -->
+
+    <title>48 exome summary</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <link type="text/css" rel="stylesheet" href="css/pure.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/global.css"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/tables.css"  media="screen,projection" />
+    <link rel='shortcut icon' href='img/favicon.png' type='image/x-icon'/ >
+</head>
+
+<body>
+    <div class="pure-g" id="desktop_nav">
+    <div class="pure-u-7-24" id="margin"></div>
+    <div class="pure-u-2-24" id="nav_link_cell"><a href="summary.html" class="nav_link">Summary</a></div>
+    <div class="pure-u-2-24" id="nav_link_cell"><a href="samples.html" class="nav_link">Samples</a></div>
+    <!-- <div class="pure-u-2-24" id="nav_link_cell"><a href="scores.html" class="nav_link">Sequencing</a></div> -->
+    <div class="pure-u-2-24" id="nav_link_cell"><a href="workflows.html" class="nav_link">Workflows</a></div>
+    <div class="pure-u-2-24" id="nav_link_cell"><a href="notes.html" class="nav_link">Notes</a></div>
+    <div class="pure-u-2-24" id="nav_link_cell"><a href="people.html" class="nav_link">People</a></div>
+    <div class="pure-u-7-24" id="margin"></div>
+</div>
+
+<div class="pure-g" id="mobile_nav">
+    <div class="pure-u-24-24 dropdown" id="nav_link_cell">
+        <a href="#" class="nav_link"><img class="pure_img" id="mobile_logo_nav" src="img/mobile-nav.png"></a>
+        <div class="dropdown_container mobile_drop">
+            <ul class="pure-menu-list">
+                <li><a href="summary.html" id="mobile_nav_link">Summary</a></li>
+                <li><a href="samples.html" id="mobile_nav_link">Sample</a></li>
+                <li><a href="workflows.html" id="mobile_nav_link">Workflows</a></li>
+                <li><a href="notes.html" id="mobile_nav_link">Notes</a></li>	
+                <li><a href="people.html" id="mobile_nav_link">People</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="pure-g"><div class="pure-u-1" id="divider_row"></div></div>
+
+	<div class="pure-g" id="main_row">
+        <div class="pure-u-1-24" id="margin"></div>
+		<div class="pure-u-22-24" id="main_col">
+			<div id="main_content">
+
+                <div id="node_links_cont">
+                    <h1>Summary of 48 exome samples</h1>
+
+                    MultiQC reports
+                    <ul>
+                        <li><a href="data/multiqc/nextseq-single-1.html" target="_blank">NextSeq single run 1</a></li>
+                        <li><a href="data/multiqc/nextseq-single-2.html" target="_blank">NextSeq single run 2</a></li>
+                        <li><a href="data/multiqc/nextseq-paired-1.html" target="_blank">NextSeq paired run 1</a></li>
+                        <li><a href="data/multiqc/nextseq-paired-2.html" target="_blank">NextSeq paired run 2</a></li>
+                        <li><a href="data/multiqc/miseq-paired.html" target="_blank">MiSeq paired</a></li>
+                        <li><a href="data/multiqc/hiseq-paired.html" target="_blank">HiSeq paired</a></li>
+                        <li><a href="data/multiqc/hiseq2500-paired.html" target="_blank">HiSeq2500 paired</a></li>
+                    </ul>
+                    <p><h4><a href="assembly_stats.html">Assembly with Abyss and Spades</a></h4></p>
+                    <p><h4>Mapping to Mouse and Rat reference genomes</p></h4>
+
+                    <h2>Sample summary table</h2>
+                    
+
+                    <center>
+                    <table id="node_links_table">
+                        <tr><td id="node_link_btn"><a href="../../data/summary-48-exomes.csv">Download CSV table</a></td></tr>
+                    </table>
+                    </center>
+                </div>
+
+                <div id="node_table_cont">
+                    <table id="node_table">
+                        				<thead>
+					<th>Genus</th><th>Species</th><th>NextSeq single IDs</th><th>NextSeq paired 1 and MiSeq paired ID</th><th>NextSeq paired 2 ID</th><th>HiSeq paired ID</th><th>HiSeq2500 paired ID</th><th>Total reads</th><th>Total read pairs</th>				</thead>
+			<tr><td>Apomys</td><td>lubangensis</td><td>30</td><td>JAE169</td><td>1</td><td></td><td></td><td>39416143</td><td>21426545</td></tr>
+			<tr><td>Batomys</td><td>salomonseni</td><td>31</td><td>JAE3320</td><td>2</td><td></td><td></td><td>44922423</td><td>24350504</td></tr>
+			<tr><td>Bulimus</td><td>bagobus</td><td>32</td><td>JAE1712</td><td>3</td><td></td><td></td><td>40136609</td><td>21817329</td></tr>
+			<tr><td>Chrotomys</td><td>mindorensis</td><td>33</td><td>JAE520</td><td>4</td><td></td><td></td><td>49304527</td><td>26782826</td></tr>
+			<tr><td>Phloeomys</td><td>pallidus</td><td>34</td><td>JEC43</td><td>5</td><td></td><td></td><td>43252850</td><td>23530983</td></tr>
+			<tr><td>Rhynchomys</td><td>isarogensis</td><td>35</td><td>JAE2195</td><td>6</td><td></td><td></td><td>48691370</td><td>26264907</td></tr>
+			<tr><td>Sundamys</td><td>meulleri</td><td>36</td><td>JAE1283</td><td>7</td><td></td><td></td><td>32921970</td><td>17941181</td></tr>
+			<tr><td>Taeromys</td><td>punicans</td><td>37</td><td>JLP25862</td><td>8</td><td></td><td></td><td>38678142</td><td>21033121</td></tr>
+			<tr><td>Hyorhinomys</td><td>stuempkei</td><td>38</td><td>JAE4661</td><td>9</td><td></td><td></td><td>35615679</td><td>19368752</td></tr>
+			<tr><td>Hybomys</td><td>univittatus</td><td>39</td><td>TCD4026</td><td>10</td><td></td><td></td><td>39965464</td><td>21692352</td></tr>
+			<tr><td>Colomys</td><td>goslingi</td><td>40</td><td>TCD4175</td><td>11</td><td></td><td></td><td>54274084</td><td>29747574</td></tr>
+			<tr><td>Malacomys</td><td>longipes</td><td>41</td><td>TCD4253</td><td>12</td><td></td><td></td><td>50346615</td><td>27328159</td></tr>
+			<tr><td>Hylomyscus</td><td>vulcanorum</td><td>42</td><td>TCD4382</td><td>13</td><td></td><td></td><td>59437143</td><td>32219229</td></tr>
+			<tr><td>Praomys</td><td>degraaffi</td><td>43</td><td>TCD4312</td><td>14</td><td></td><td></td><td>53934147</td><td>29299873</td></tr>
+			<tr><td>Grammomys</td><td>sp</td><td>44</td><td>TCD4560</td><td>15</td><td></td><td></td><td>57287635</td><td>31121807</td></tr>
+			<tr><td>Lemniscomys</td><td>striatus</td><td>45</td><td>TCD4711</td><td>16</td><td></td><td></td><td>40763543</td><td>22187579</td></tr>
+			<tr><td>Berylymys</td><td>bowersi</td><td>46</td><td>ABTC116431</td><td>17</td><td></td><td></td><td>82273802</td><td>44343161</td></tr>
+			<tr><td>Crunomys</td><td>celebensis</td><td>47</td><td>Z21894</td><td>18</td><td></td><td></td><td>41655844</td><td>22666137</td></tr>
+			<tr><td>Echiothrix</td><td>centrosa</td><td>48</td><td>Z27993</td><td>19</td><td></td><td></td><td>31902118</td><td>16016280</td></tr>
+			<tr><td>Gracillimus</td><td>radix</td><td>49</td><td>Z08508</td><td>20</td><td></td><td></td><td>59242028</td><td>32139651</td></tr>
+			<tr><td>Leopoldomys</td><td>sabanus</td><td>50</td><td>Z25191</td><td>21</td><td></td><td></td><td>43652099</td><td>23787403</td></tr>
+			<tr><td>Margaretamys</td><td>parvus</td><td>51</td><td>Z21794</td><td>22</td><td></td><td></td><td>33142973</td><td>18101156</td></tr>
+			<tr><td>Melasmothrix</td><td>naso</td><td>52</td><td>Z21808</td><td>23</td><td></td><td></td><td>38443508</td><td>20930100</td></tr>
+			<tr><td>Paucidentomys</td><td>vermidax</td><td>53</td><td>Z21914</td><td>24</td><td></td><td></td><td>35942038</td><td>19647305</td></tr>
+			<tr><td>Sommeromys</td><td>macrorhinos</td><td>54</td><td>Z21740</td><td>25</td><td></td><td></td><td>36326027</td><td>19783461</td></tr>
+			<tr><td>Tateomys</td><td>macrocercus</td><td>55</td><td>Z21834</td><td>26</td><td></td><td></td><td>29214446</td><td>15912812</td></tr>
+			<tr><td>Tateomys</td><td>rhinogradoides</td><td>56</td><td>Z21785</td><td>27</td><td></td><td></td><td>46966637</td><td>25585521</td></tr>
+			<tr><td>Waiomys</td><td>mamasae</td><td>57</td><td>Z20624</td><td>28</td><td></td><td></td><td>60816797</td><td>32796949</td></tr>
+			<tr><td>Chiropodomys</td><td>gliroides</td><td>58</td><td>Z25153</td><td>29</td><td></td><td></td><td>35062012</td><td>19118307</td></tr>
+			<tr><td>Lorentzimys</td><td>nouhuysi</td><td>59</td><td>ABTC-46314</td><td>30</td><td></td><td></td><td>54949680</td><td>29842442</td></tr>
+			<tr><td>Mastacomys</td><td>fuscus</td><td>60</td><td>ABTC-07354</td><td>31</td><td></td><td></td><td>46576366</td><td>25330404</td></tr>
+			<tr><td>Melomys</td><td>rufescens</td><td>61</td><td>ABTC-44798</td><td>32</td><td></td><td></td><td>45386226</td><td>24648302</td></tr>
+			<tr><td>Hydromys</td><td>chrysogaster</td><td>62</td><td>Z5248</td><td>33</td><td></td><td></td><td>65143184</td><td>35125509</td></tr>
+			<tr><td>Apodemus</td><td>sylvaticus</td><td>63</td><td>SMG3823</td><td>34</td><td></td><td></td><td>36407714</td><td>19861090</td></tr>
+			<tr><td>Archboldomys</td><td>luzonensis</td><td>64</td><td>EAR1826</td><td>35</td><td></td><td></td><td>38003656</td><td>20698001</td></tr>
+			<tr><td>Bunomys</td><td>chrysocomus</td><td>65</td><td>JAE4867</td><td>36</td><td></td><td></td><td>45882606</td><td>24928833</td></tr>
+			<tr><td>Haeromys</td><td>minahassae</td><td>66</td><td>JAE4996</td><td>37</td><td></td><td></td><td>33738032</td><td>18430382</td></tr>
+			<tr><td>Maxomys</td><td>surifer</td><td>67</td><td>JAE3632</td><td>38</td><td></td><td></td><td>43596256</td><td>23741537</td></tr>
+			<tr><td>Niviventer</td><td>lepturus</td><td>68</td><td>JAE4746</td><td>39</td><td></td><td></td><td>40539155</td><td>22052509</td></tr>
+			<tr><td>Paruromys</td><td>dominator</td><td>69</td><td>JAE4870</td><td>40</td><td></td><td></td><td>25357527</td><td>13860017</td></tr>
+			<tr><td>Bunomys</td><td>andrewsi</td><td></td><td></td><td></td><td>andrewsii</td><td>GATGCC</td><td>22177568</td><td>11088784</td></tr>
+			<tr><td>Rattus</td><td>exulans</td><td></td><td></td><td></td><td>exulans</td><td>TGACGT and GCATTG</td><td>51423276</td><td>25711638</td></tr>
+			<tr><td>Rattus</td><td>hoffmani</td><td></td><td></td><td></td><td>hoffmani</td><td>CCGATT and GATCTC</td><td>58994848</td><td>29497424</td></tr>
+			<tr><td>Rattus</td><td>leucopus</td><td></td><td></td><td></td><td>leucopus</td><td>ATGCCG</td><td>22859962</td><td>11429981</td></tr>
+			<tr><td>Rattus</td><td>lutreolus</td><td></td><td></td><td></td><td>lutreolus</td><td>CAATAT</td><td>28388342</td><td>14194171</td></tr>
+			<tr><td>Maxomys</td><td>musschenbroekii</td><td></td><td></td><td></td><td>musschenbroekii</td><td>CAATTA</td><td>25086182</td><td>12543091</td></tr>
+			<tr><td>Rattus</td><td>praetor</td><td></td><td></td><td></td><td>praetor</td><td>CAGTAC</td><td>21106198</td><td>10553099</td></tr>
+			<tr><td>Rattus</td><td>villosissimus</td><td></td><td></td><td></td><td>vilosissimus</td><td>AGATAG</td><td>29499268</td><td>14749634</td></tr>
+		</table>
+
+                    </table>
+                </div>
+
+                
+			</div>
+		</div>
+		<div class="pure-u-1-24" id="margin"></div>
+	</div>
+
+    <div class="pure-g"><div class="pure-u-1" id="divider_row"></div></div>
+<div class="pure-g" id="footer">
+    <div class="pure-u-1">
+        <div id="footer_text">
+            <center>Site designed and maintained by <a href="https://gwct.github.io/index.html" target="_blank">Gregg Thomas</a> | <a href="https://purecss.io/" target="_blank">Pure CSS</a> |
+                Page built: 11/21/2019 16:42:39 MST</center>
+        </div>
+    </div>
+</div>
+</body>

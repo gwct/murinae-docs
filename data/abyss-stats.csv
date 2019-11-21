@@ -1,0 +1,865 @@
+Species,k,type,count,avg len,N50,L50
+Apomys lubangensis,20,Unitig,1158197,79.102832247,636,5021
+Apomys lubangensis,20,Contig,1136248,80.3065422337,663,6503
+Apomys lubangensis,20,Scaffold,1132995,80.5742540788,682,6731
+Apomys lubangensis,30,Unitig,1493997,113.843558588,689,17732
+Apomys lubangensis,30,Contig,1475633,114.969825153,704,19084
+Apomys lubangensis,30,Scaffold,1472737,115.202232306,710,19293
+Apomys lubangensis,40,Unitig,520378,190.337279824,682,13937
+Apomys lubangensis,40,Contig,510674,193.397179022,691,14704
+Apomys lubangensis,40,Scaffold,509452,193.825604767,695,14736
+Apomys lubangensis,50,Unitig,352061,198.130363772,656,7633
+Apomys lubangensis,50,Contig,345011,201.463875065,662,8309
+Apomys lubangensis,50,Scaffold,344303,201.83322829,666,8301
+Apomys lubangensis,60,Unitig,116652,214.834096286,624,2475
+Apomys lubangensis,60,Contig,113205,220.656393269,634,2820
+Apomys lubangensis,60,Scaffold,112415,221.92577503,640,2885
+Apomys lubangensis,65,Unitig,29214,212.933935784,612,386
+Apomys lubangensis,65,Contig,28406,219.769344505,625,479
+Apomys lubangensis,65,Scaffold,27997,222.24981248,637,503
+Batomys salomonseni,20,Unitig,1283562,74.8374757121,630,4689
+Batomys salomonseni,20,Contig,1259236,75.9633690587,658,6249
+Batomys salomonseni,20,Scaffold,1256158,76.1697883546,674,6507
+Batomys salomonseni,30,Unitig,1755083,107.038247194,676,17177
+Batomys salomonseni,30,Contig,1734208,108.044697061,687,18740
+Batomys salomonseni,30,Scaffold,1731065,108.249353433,693,19034
+Batomys salomonseni,40,Unitig,523435,191.500050627,667,13862
+Batomys salomonseni,40,Contig,512471,194.933908455,675,14688
+Batomys salomonseni,40,Scaffold,510966,195.466723813,679,14730
+Batomys salomonseni,50,Unitig,345245,205.487755072,644,7609
+Batomys salomonseni,50,Contig,337432,209.38232592,651,8249
+Batomys salomonseni,50,Scaffold,336711,209.780610078,654,8307
+Batomys salomonseni,60,Unitig,124581,218.381550959,627,2268
+Batomys salomonseni,60,Contig,121276,223.732057456,634,2566
+Batomys salomonseni,60,Scaffold,120371,225.077327596,642,2624
+Batomys salomonseni,65,Unitig,31570,207.467405765,615,285
+Batomys salomonseni,65,Contig,30892,212.667389615,621,368
+Batomys salomonseni,65,Scaffold,30500,214.793803279,648,402
+Bulimus bagobus,20,Unitig,1149913,79.0887719332,633,5253
+Bulimus bagobus,20,Contig,1127248,80.341066917,662,6832
+Bulimus bagobus,20,Scaffold,1123820,80.6271609332,681,7067
+Bulimus bagobus,30,Unitig,1526406,112.983487355,690,18615
+Bulimus bagobus,30,Contig,1507398,114.114564966,705,20049
+Bulimus bagobus,30,Scaffold,1504615,114.340047122,712,20123
+Bulimus bagobus,40,Unitig,499588,195.660942617,682,14873
+Bulimus bagobus,40,Contig,489378,199.112649118,694,15559
+Bulimus bagobus,40,Scaffold,488138,199.580774289,697,15598
+Bulimus bagobus,50,Unitig,338480,203.943317183,659,8261
+Bulimus bagobus,50,Contig,331197,207.629833604,666,8912
+Bulimus bagobus,50,Scaffold,330578,207.983084174,669,8927
+Bulimus bagobus,60,Unitig,113714,222.334971947,624,2818
+Bulimus bagobus,60,Contig,109760,229.361980685,634,3174
+Bulimus bagobus,60,Scaffold,109079,230.551416863,638,3239
+Bulimus bagobus,65,Unitig,29105,221.115856382,608,416
+Bulimus bagobus,65,Contig,28128,229.348478385,622,529
+Bulimus bagobus,65,Scaffold,27739,231.978658207,639,566
+Chrotomys mindorensis,20,Unitig,1295092,78.6131332755,633,5749
+Chrotomys mindorensis,20,Contig,1263658,80.149576072,668,7784
+Chrotomys mindorensis,20,Scaffold,1259181,80.4793560259,690,8132
+Chrotomys mindorensis,30,Unitig,385259,182.554097373,858,8777
+Chrotomys mindorensis,30,Contig,376936,186.097836237,871,8913
+Chrotomys mindorensis,30,Scaffold,375892,186.66271163,879,8877
+Chrotomys mindorensis,40,Unitig,508791,211.866491349,696,17890
+Chrotomys mindorensis,40,Contig,496719,216.293187899,706,18731
+Chrotomys mindorensis,40,Scaffold,495029,216.990247036,711,18677
+Chrotomys mindorensis,50,Unitig,365850,219.17969933,667,10571
+Chrotomys mindorensis,50,Contig,357034,223.716674042,676,11282
+Chrotomys mindorensis,50,Scaffold,356276,224.149934321,679,11312
+Chrotomys mindorensis,60,Unitig,144149,228.541918432,633,3647
+Chrotomys mindorensis,60,Contig,139523,235.348723866,643,4082
+Chrotomys mindorensis,60,Scaffold,138573,236.681150008,648,4135
+Chrotomys mindorensis,65,Unitig,38277,219.267105573,609,535
+Chrotomys mindorensis,65,Contig,37207,226.312091811,620,660
+Chrotomys mindorensis,65,Scaffold,36684,228.876076764,643,713
+Phloeomys pallidus,20,Unitig,1256706,74.4728592049,632,5088
+Phloeomys pallidus,20,Contig,1233940,75.535503347,661,6632
+Phloeomys pallidus,20,Scaffold,1230813,75.7571848851,678,6839
+Phloeomys pallidus,30,Unitig,1680550,107.47683794,675,18188
+Phloeomys pallidus,30,Contig,1661271,108.448903881,689,19878
+Phloeomys pallidus,30,Scaffold,1658209,108.656226688,696,19950
+Phloeomys pallidus,40,Unitig,523391,187.662621253,671,14137
+Phloeomys pallidus,40,Contig,514788,190.290698307,682,14763
+Phloeomys pallidus,40,Scaffold,513678,190.674490634,684,14837
+Phloeomys pallidus,50,Unitig,354255,194.21233857,646,7083
+Phloeomys pallidus,50,Contig,347270,197.413257696,653,7779
+Phloeomys pallidus,50,Scaffold,346737,197.683030654,656,7789
+Phloeomys pallidus,60,Unitig,114025,201.856206972,627,1719
+Phloeomys pallidus,60,Contig,110823,207.330247331,641,2011
+Phloeomys pallidus,60,Scaffold,109971,208.600385556,649,2077
+Phloeomys pallidus,65,Unitig,23328,179.22239369,642,122
+Phloeomys pallidus,65,Contig,22825,183.942168675,640,177
+Phloeomys pallidus,65,Scaffold,22528,185.730823864,687,190
+Rhynchomys isarogensis,20,Unitig,1174795,76.8963708562,632,4040
+Rhynchomys isarogensis,20,Contig,1151532,78.1042315802,662,5233
+Rhynchomys isarogensis,20,Scaffold,1150304,78.1880068225,672,5273
+Rhynchomys isarogensis,30,Unitig,370819,169.080281755,795,6149
+Rhynchomys isarogensis,30,Contig,365318,171.286714588,802,6280
+Rhynchomys isarogensis,30,Scaffold,364912,171.47846056,804,6296
+Rhynchomys isarogensis,40,Unitig,243550,211.696563334,750,4803
+Rhynchomys isarogensis,40,Contig,239529,214.738862518,756,4973
+Rhynchomys isarogensis,40,Scaffold,239253,214.965250175,758,4992
+Rhynchomys isarogensis,50,Unitig,332670,208.718186191,642,4888
+Rhynchomys isarogensis,50,Contig,325287,212.548149788,652,5280
+Rhynchomys isarogensis,50,Scaffold,324899,212.767019905,654,5297
+Rhynchomys isarogensis,60,Unitig,132437,205.889834412,625,1129
+Rhynchomys isarogensis,60,Contig,129427,209.914932742,639,1294
+Rhynchomys isarogensis,60,Scaffold,129127,210.322767508,645,1327
+Rhynchomys isarogensis,65,Unitig,24651,174.73635958,641,54
+Rhynchomys isarogensis,65,Contig,24397,176.626839365,649,72
+Rhynchomys isarogensis,65,Scaffold,24281,177.289032577,677,88
+Sundamys meulleri,20,Unitig,2623671,66.837057314,595,4812
+Sundamys meulleri,20,Contig,2600296,67.2929981817,611,7023
+Sundamys meulleri,20,Scaffold,2596531,67.4042732399,623,7626
+Sundamys meulleri,30,Unitig,1372173,112.014820289,680,15878
+Sundamys meulleri,30,Contig,1355161,113.130740185,696,17314
+Sundamys meulleri,30,Scaffold,1353165,113.301887057,702,17368
+Sundamys meulleri,40,Unitig,509450,177.539448425,674,12118
+Sundamys meulleri,40,Contig,500052,180.342086423,685,12873
+Sundamys meulleri,40,Scaffold,499146,180.652905162,687,12940
+Sundamys meulleri,50,Unitig,332720,184.627209065,651,6482
+Sundamys meulleri,50,Contig,325549,187.922884113,657,7192
+Sundamys meulleri,50,Scaffold,324949,188.245832423,660,7195
+Sundamys meulleri,60,Unitig,98717,204.136015073,619,2111
+Sundamys meulleri,60,Contig,95186,210.755478747,628,2447
+Sundamys meulleri,60,Scaffold,94442,212.099171979,634,2500
+Sundamys meulleri,65,Unitig,25001,197.118395264,616,285
+Sundamys meulleri,65,Contig,24030,205.372409488,630,366
+Sundamys meulleri,65,Scaffold,23630,208.046466356,649,403
+Taeromys punicans,20,Unitig,1147617,79.1538291956,637,5288
+Taeromys punicans,20,Contig,1123826,80.4700442951,668,6834
+Taeromys punicans,20,Scaffold,1120747,80.724982534,687,7015
+Taeromys punicans,30,Unitig,1514520,112.870728019,684,18412
+Taeromys punicans,30,Contig,1494166,114.090574943,698,19931
+Taeromys punicans,30,Scaffold,1491904,114.263604763,703,20071
+Taeromys punicans,40,Unitig,509958,193.087734676,678,14675
+Taeromys punicans,40,Contig,498925,196.710836298,686,15555
+Taeromys punicans,40,Scaffold,498017,197.055969977,688,15601
+Taeromys punicans,50,Unitig,351068,199.935274648,649,8274
+Taeromys punicans,50,Contig,342345,204.113417751,656,9072
+Taeromys punicans,50,Scaffold,341780,204.431590497,659,9061
+Taeromys punicans,60,Unitig,117055,216.470684721,619,2701
+Taeromys punicans,60,Contig,112588,223.831065478,628,3090
+Taeromys punicans,60,Scaffold,111861,225.083272991,633,3120
+Taeromys punicans,65,Unitig,28855,211.669485358,591,406
+Taeromys punicans,65,Contig,27599,221.168774231,610,509
+Taeromys punicans,65,Scaffold,27230,223.672273228,632,533
+Hyorhinomys stuempkei,20,Unitig,1107376,80.6405231827,639,5505
+Hyorhinomys stuempkei,20,Contig,1086580,81.8588976421,665,6993
+Hyorhinomys stuempkei,20,Scaffold,1083641,82.1087251221,683,7157
+Hyorhinomys stuempkei,30,Unitig,1411668,116.156552391,692,18362
+Hyorhinomys stuempkei,30,Contig,1394735,117.271481679,707,19740
+Hyorhinomys stuempkei,30,Scaffold,1392464,117.457949362,712,19834
+Hyorhinomys stuempkei,40,Unitig,487120,197.552005666,684,14423
+Hyorhinomys stuempkei,40,Contig,478504,200.55071013,693,15120
+Hyorhinomys stuempkei,40,Scaffold,477659,200.87886128,696,15093
+Hyorhinomys stuempkei,50,Unitig,335254,201.840413537,658,7740
+Hyorhinomys stuempkei,50,Contig,329084,204.917546888,664,8376
+Hyorhinomys stuempkei,50,Scaffold,328575,205.21052119,666,8401
+Hyorhinomys stuempkei,60,Unitig,106852,218.918915884,624,2544
+Hyorhinomys stuempkei,60,Contig,103700,224.573751205,633,2790
+Hyorhinomys stuempkei,60,Scaffold,103322,225.283782737,636,2820
+Hyorhinomys stuempkei,65,Unitig,25357,212.346886461,613,309
+Hyorhinomys stuempkei,65,Contig,24499,219.709375893,618,384
+Hyorhinomys stuempkei,65,Scaffold,24243,221.584869859,632,408
+Hybomys univittatus,20,Unitig,1200652,73.5157814254,620,3955
+Hybomys univittatus,20,Contig,1184934,74.2764601235,643,5057
+Hybomys univittatus,20,Scaffold,1182691,74.4421349279,658,5260
+Hybomys univittatus,30,Unitig,1554124,107.199033668,663,13542
+Hybomys univittatus,30,Contig,1538331,108.063151558,679,14972
+Hybomys univittatus,30,Scaffold,1535654,108.24975092,685,15128
+Hybomys univittatus,40,Unitig,552829,169.662369376,660,9656
+Hybomys univittatus,40,Contig,544803,171.70041281,669,10351
+Hybomys univittatus,40,Scaffold,543736,172.008185958,672,10419
+Hybomys univittatus,50,Unitig,354913,174.147937664,638,3902
+Hybomys univittatus,50,Contig,348640,176.667347407,646,4612
+Hybomys univittatus,50,Scaffold,347983,176.955926008,650,4646
+Hybomys univittatus,60,Unitig,94343,178.389154468,633,601
+Hybomys univittatus,60,Contig,92833,181.626005838,647,796
+Hybomys univittatus,60,Scaffold,91812,183.141245153,678,860
+Hybomys univittatus,65,Unitig,14674,153.097928309,695,36
+Hybomys univittatus,65,Contig,14592,154.760348136,713,48
+Hybomys univittatus,65,Scaffold,14444,155.896289117,724,65
+Colomys goslingi,20,Unitig,1566955,68.9079731071,632,4638
+Colomys goslingi,20,Contig,1540162,69.8178509793,661,6305
+Colomys goslingi,20,Scaffold,1536172,70.0293827774,681,6612
+Colomys goslingi,30,Unitig,555880,138.517086422,846,7468
+Colomys goslingi,30,Contig,545476,140.779361512,857,7743
+Colomys goslingi,30,Scaffold,544077,141.163412532,871,7724
+Colomys goslingi,40,Unitig,686454,170.235857028,685,14641
+Colomys goslingi,40,Contig,668029,174.166434391,692,15980
+Colomys goslingi,40,Scaffold,665162,174.848247495,698,16161
+Colomys goslingi,50,Unitig,455756,186.840706431,663,8460
+Colomys goslingi,50,Contig,441454,191.721635776,670,9570
+Colomys goslingi,50,Scaffold,439290,192.558064149,677,9679
+Colomys goslingi,60,Unitig,167053,206.526892663,639,3020
+Colomys goslingi,60,Contig,159310,215.04972067,652,3658
+Colomys goslingi,60,Scaffold,157181,217.531107449,670,3713
+Colomys goslingi,65,Unitig,48313,207.953925444,636,639
+Colomys goslingi,65,Contig,46585,216.048749598,664,827
+Colomys goslingi,65,Scaffold,45264,221.134256805,709,870
+Malacomys longipes,20,Unitig,1533041,69.8947190584,628,4954
+Malacomys longipes,20,Contig,1509245,70.7331195399,655,6483
+Malacomys longipes,20,Scaffold,1505748,70.9306391242,674,6762
+Malacomys longipes,30,Unitig,521881,142.89103263,839,7710
+Malacomys longipes,30,Contig,514679,144.587711952,853,7843
+Malacomys longipes,30,Scaffold,513612,144.917412366,862,7806
+Malacomys longipes,40,Unitig,652021,172.360537467,687,14323
+Malacomys longipes,40,Contig,639817,175.079355503,696,15161
+Malacomys longipes,40,Scaffold,638060,175.524115287,700,15251
+Malacomys longipes,50,Unitig,437183,184.403233886,655,7783
+Malacomys longipes,50,Contig,428117,187.518802103,664,8479
+Malacomys longipes,50,Scaffold,427050,187.93719705,667,8548
+Malacomys longipes,60,Unitig,153812,195.27774816,623,2315
+Malacomys longipes,60,Contig,149566,200.136735622,638,2743
+Malacomys longipes,60,Scaffold,148285,201.538995853,648,2806
+Malacomys longipes,65,Unitig,41058,178.549953724,625,268
+Malacomys longipes,65,Contig,40274,182.575532602,634,359
+Malacomys longipes,65,Scaffold,39665,184.733518215,668,403
+Hylomyscus vulcanorum,20,Unitig,1993267,62.0294988077,621,4134
+Hylomyscus vulcanorum,20,Contig,1962573,62.7468313281,646,5945
+Hylomyscus vulcanorum,20,Scaffold,1958852,62.8829207107,666,6288
+Hylomyscus vulcanorum,30,Unitig,636577,131.17071619,835,8127
+Hylomyscus vulcanorum,30,Contig,625286,133.127077849,857,8255
+Hylomyscus vulcanorum,30,Scaffold,623660,133.506498733,869,8185
+Hylomyscus vulcanorum,40,Unitig,753207,164.873534102,680,14746
+Hylomyscus vulcanorum,40,Contig,733733,168.383909406,690,16132
+Hylomyscus vulcanorum,40,Scaffold,730526,169.043932728,696,16320
+Hylomyscus vulcanorum,50,Unitig,477640,187.957727577,658,8675
+Hylomyscus vulcanorum,50,Contig,464795,192.087320216,665,9699
+Hylomyscus vulcanorum,50,Scaffold,463160,192.663006305,670,9761
+Hylomyscus vulcanorum,60,Unitig,186763,203.400218459,630,2921
+Hylomyscus vulcanorum,60,Contig,181042,209.070596878,640,3397
+Hylomyscus vulcanorum,60,Scaffold,179403,210.607102445,650,3511
+Hylomyscus vulcanorum,65,Unitig,55730,200.552377535,623,563
+Hylomyscus vulcanorum,65,Contig,54756,205.200562495,632,708
+Hylomyscus vulcanorum,65,Scaffold,53874,207.843412407,651,794
+Praomys degraaffi,20,Unitig,1569343,65.6197013655,626,3867
+Praomys degraaffi,20,Contig,1554405,66.095677124,646,4908
+Praomys degraaffi,20,Scaffold,1552206,66.2089986767,664,5071
+Praomys degraaffi,30,Unitig,553392,127.526026759,802,6015
+Praomys degraaffi,30,Contig,547864,128.606305579,820,6085
+Praomys degraaffi,30,Scaffold,546998,128.828816559,830,6049
+Praomys degraaffi,40,Unitig,723185,149.100501255,665,7868
+Praomys degraaffi,40,Contig,711308,151.066231506,676,8818
+Praomys degraaffi,40,Scaffold,709614,151.393623857,680,8920
+Praomys degraaffi,50,Unitig,441079,156.40436067,641,2410
+Praomys degraaffi,50,Contig,431681,159.037092205,666,3182
+Praomys degraaffi,50,Scaffold,430724,159.361642258,675,3249
+Praomys degraaffi,60,Unitig,95247,154.643180363,619,232
+Praomys degraaffi,60,Contig,94147,156.658873889,648,362
+Praomys degraaffi,60,Scaffold,93266,157.737589261,701,427
+Praomys degraaffi,65,Unitig,10029,125.289261143,808,17
+Praomys degraaffi,65,Contig,9978,126.366806975,813,22
+Praomys degraaffi,65,Scaffold,9857,127.404585574,882,28
+Grammomys sp,20,Unitig,1577882,70.1256063508,630,5177
+Grammomys sp,20,Contig,1546530,71.2026258786,661,7153
+Grammomys sp,20,Scaffold,1541932,71.4525737841,684,7477
+Grammomys sp,30,Unitig,510799,149.755915732,855,8204
+Grammomys sp,30,Contig,501372,152.181270593,871,8354
+Grammomys sp,30,Scaffold,499999,152.642135284,882,8312
+Grammomys sp,40,Unitig,627386,185.484374851,690,17102
+Grammomys sp,40,Contig,610242,189.877756693,701,18212
+Grammomys sp,40,Scaffold,607371,190.714535268,707,18306
+Grammomys sp,50,Unitig,422439,203.180570449,668,10186
+Grammomys sp,50,Contig,409285,208.534681212,677,11136
+Grammomys sp,50,Scaffold,407493,209.353397482,682,11219
+Grammomys sp,60,Unitig,168064,220.351502999,641,3838
+Grammomys sp,60,Contig,160462,229.199785619,652,4464
+Grammomys sp,60,Scaffold,159063,230.989513589,662,4509
+Grammomys sp,65,Unitig,51366,216.570494101,619,758
+Grammomys sp,65,Contig,49338,225.509931493,632,964
+Grammomys sp,65,Scaffold,48374,229.294807128,666,1025
+Lemniscomys striatus,20,Unitig,1290748,73.5221483977,626,4634
+Lemniscomys striatus,20,Contig,1268719,74.5108995767,651,6119
+Lemniscomys striatus,20,Scaffold,1265516,74.7291689714,667,6393
+Lemniscomys striatus,30,Unitig,1656850,107.640137611,673,16751
+Lemniscomys striatus,30,Contig,1631994,108.912987425,690,19048
+Lemniscomys striatus,30,Scaffold,1627814,109.185429048,698,19301
+Lemniscomys striatus,40,Unitig,543489,184.951242803,671,13730
+Lemniscomys striatus,40,Contig,530905,188.590619791,685,14771
+Lemniscomys striatus,40,Scaffold,528986,189.206128329,690,14815
+Lemniscomys striatus,50,Unitig,353964,198.013097377,652,7587
+Lemniscomys striatus,50,Contig,345915,201.750291257,663,8262
+Lemniscomys striatus,50,Scaffold,345138,202.163520099,666,8294
+Lemniscomys striatus,60,Unitig,114680,218.175322637,628,2505
+Lemniscomys striatus,60,Contig,110847,224.758883867,635,2868
+Lemniscomys striatus,60,Scaffold,110122,226.008763008,641,2906
+Lemniscomys striatus,65,Unitig,29196,213.271270037,603,369
+Lemniscomys striatus,65,Contig,28317,220.345552142,617,463
+Lemniscomys striatus,65,Scaffold,27936,222.759342784,637,488
+Berylymys bowersi,20,Unitig,7005119,49.1891439674,571,1369
+Berylymys bowersi,20,Contig,6973619,49.3410153322,578,2599
+Berylymys bowersi,20,Scaffold,6971656,49.3567436489,586,2917
+Berylymys bowersi,30,Unitig,3262317,87.523389971,666,13823
+Berylymys bowersi,30,Contig,3230633,88.1568760673,672,15577
+Berylymys bowersi,30,Scaffold,3225022,88.3303307698,676,16247
+Berylymys bowersi,40,Unitig,893598,147.118410068,661,12020
+Berylymys bowersi,40,Contig,874470,149.618229327,668,13098
+Berylymys bowersi,40,Scaffold,869882,150.330466661,673,13485
+Berylymys bowersi,50,Unitig,475087,185.247259976,639,7147
+Berylymys bowersi,50,Contig,462605,189.154207153,647,7961
+Berylymys bowersi,50,Scaffold,460346,189.922516976,653,8083
+Berylymys bowersi,60,Unitig,203494,202.696674103,639,2321
+Berylymys bowersi,60,Contig,199042,206.668130344,649,2637
+Berylymys bowersi,60,Scaffold,197638,207.844149404,663,2736
+Berylymys bowersi,65,Unitig,67427,191.829267207,624,420
+Berylymys bowersi,65,Contig,66418,194.893161492,633,510
+Berylymys bowersi,65,Scaffold,65750,196.459269962,658,576
+Crunomys celebensis,20,Unitig,1200787,77.9730293549,632,5397
+Crunomys celebensis,20,Contig,1175123,79.3085336599,664,7040
+Crunomys celebensis,20,Scaffold,1171636,79.5721922167,681,7306
+Crunomys celebensis,30,Unitig,407093,159.497527592,829,7252
+Crunomys celebensis,30,Contig,399514,162.103655942,839,7447
+Crunomys celebensis,30,Scaffold,398673,162.472241662,848,7427
+Crunomys celebensis,40,Unitig,530279,192.279584898,673,15822
+Crunomys celebensis,40,Contig,517012,196.464933116,683,16803
+Crunomys celebensis,40,Scaffold,515604,196.966875742,687,16837
+Crunomys celebensis,50,Unitig,364349,202.637954269,652,9046
+Crunomys celebensis,50,Contig,354609,207.220197457,661,9841
+Crunomys celebensis,50,Scaffold,353854,207.625339829,664,9869
+Crunomys celebensis,60,Unitig,127359,223.904388382,626,3303
+Crunomys celebensis,60,Contig,122332,231.754659451,637,3684
+Crunomys celebensis,60,Scaffold,121617,232.967414095,645,3705
+Crunomys celebensis,65,Unitig,34676,228.64344215,601,686
+Crunomys celebensis,65,Contig,33152,238.641560087,610,830
+Crunomys celebensis,65,Scaffold,32729,241.308808702,624,850
+Echiothrix centrosa,20,Unitig,2808764,64.2738531966,591,3402
+Echiothrix centrosa,20,Contig,2786080,64.6684578332,602,5041
+Echiothrix centrosa,20,Scaffold,2783420,64.7316833248,611,5486
+Echiothrix centrosa,30,Unitig,1463282,107.956818986,664,12771
+Echiothrix centrosa,30,Contig,1443723,109.086711925,677,14524
+Echiothrix centrosa,30,Scaffold,1440849,109.286931524,684,14741
+Echiothrix centrosa,40,Unitig,483599,181.414357763,662,10278
+Echiothrix centrosa,40,Contig,474569,184.232876568,671,11092
+Echiothrix centrosa,40,Scaffold,473512,184.599359678,674,11157
+Echiothrix centrosa,50,Unitig,308757,192.562805054,639,5459
+Echiothrix centrosa,50,Contig,303425,195.259319436,645,5912
+Echiothrix centrosa,50,Scaffold,302976,195.515832937,647,5939
+Echiothrix centrosa,60,Unitig,94787,211.785445261,615,1627
+Echiothrix centrosa,60,Contig,92673,216.032037379,624,1805
+Echiothrix centrosa,60,Scaffold,92146,217.016018058,629,1856
+Echiothrix centrosa,65,Unitig,23345,215.007967445,606,254
+Echiothrix centrosa,65,Contig,22880,219.617657343,607,297
+Echiothrix centrosa,65,Scaffold,22671,221.236028406,625,315
+Gracillimus radix,20,Unitig,1548658,71.4374058055,632,5756
+Gracillimus radix,20,Contig,1508383,72.8949815796,668,8183
+Gracillimus radix,20,Scaffold,1503874,73.1337066802,689,8478
+Gracillimus radix,30,Unitig,490250,156.668401836,869,8739
+Gracillimus radix,30,Contig,478912,159.86887779,876,9055
+Gracillimus radix,30,Scaffold,477665,160.305873363,882,9071
+Gracillimus radix,40,Unitig,302637,210.248019905,816,7485
+Gracillimus radix,40,Contig,293913,215.618914441,824,7811
+Gracillimus radix,40,Scaffold,292935,216.318043252,831,7842
+Gracillimus radix,50,Unitig,405815,216.34763131,654,12182
+Gracillimus radix,50,Contig,391756,222.828411052,663,13179
+Gracillimus radix,50,Scaffold,390500,223.497953905,667,13185
+Gracillimus radix,60,Unitig,177790,231.95992463,633,4603
+Gracillimus radix,60,Contig,170100,240.910029394,646,5090
+Gracillimus radix,60,Scaffold,168838,242.498566673,656,5092
+Gracillimus radix,65,Unitig,58581,225.212918864,603,1048
+Gracillimus radix,65,Contig,55967,234.777994175,621,1250
+Gracillimus radix,65,Scaffold,55203,237.597521874,644,1281
+Leopoldomys sabanus,20,Unitig,1252193,77.9348159589,634,5599
+Leopoldomys sabanus,20,Contig,1222344,79.430730629,664,7527
+Leopoldomys sabanus,20,Scaffold,1219078,79.6682107297,681,7690
+Leopoldomys sabanus,30,Unitig,410105,167.696021751,844,8052
+Leopoldomys sabanus,30,Contig,401830,170.715277605,853,8261
+Leopoldomys sabanus,30,Scaffold,401074,171.050427103,859,8255
+Leopoldomys sabanus,40,Unitig,507224,203.374361229,681,16463
+Leopoldomys sabanus,40,Contig,495223,207.613891116,686,17290
+Leopoldomys sabanus,40,Scaffold,493954,208.109700498,689,17377
+Leopoldomys sabanus,50,Unitig,360258,213.313478118,652,9586
+Leopoldomys sabanus,50,Contig,350946,218.024280089,657,10301
+Leopoldomys sabanus,50,Scaffold,350106,218.503561778,660,10328
+Leopoldomys sabanus,60,Unitig,145729,222.372225158,621,3134
+Leopoldomys sabanus,60,Contig,140997,228.907480301,631,3528
+Leopoldomys sabanus,60,Scaffold,140030,230.242419482,638,3588
+Leopoldomys sabanus,65,Unitig,40092,217.678015564,602,533
+Leopoldomys sabanus,65,Contig,38877,224.856496129,616,652
+Leopoldomys sabanus,65,Scaffold,38358,227.281219042,635,695
+Margaretamys parvus,20,Unitig,1036705,80.2590563371,640,4968
+Margaretamys parvus,20,Contig,1016786,81.5110908293,666,6288
+Margaretamys parvus,20,Scaffold,1014300,81.7413082914,682,6458
+Margaretamys parvus,30,Unitig,1337700,114.992835464,678,16457
+Margaretamys parvus,30,Contig,1320149,116.21601501,693,17846
+Margaretamys parvus,30,Scaffold,1318322,116.374749871,698,17915
+Margaretamys parvus,40,Unitig,486466,188.541028561,670,12941
+Margaretamys parvus,40,Contig,476695,191.785051238,679,13692
+Margaretamys parvus,40,Scaffold,475860,192.100384567,681,13754
+Margaretamys parvus,50,Unitig,329371,195.218756357,648,7118
+Margaretamys parvus,50,Contig,322616,198.536839462,653,7704
+Margaretamys parvus,50,Scaffold,322183,198.776412784,655,7707
+Margaretamys parvus,60,Unitig,106129,214.078969933,618,2354
+Margaretamys parvus,60,Contig,102910,219.976076183,627,2627
+Margaretamys parvus,60,Scaffold,102239,221.172409746,631,2704
+Margaretamys parvus,65,Unitig,27236,216.066199148,607,380
+Margaretamys parvus,65,Contig,26340,223.835649203,625,463
+Margaretamys parvus,65,Scaffold,25984,226.288446736,637,494
+Melasmothrix naso,20,Unitig,1180930,78.5441838212,638,5463
+Melasmothrix naso,20,Contig,1156659,79.8348087033,667,7019
+Melasmothrix naso,20,Scaffold,1153773,80.0550350892,682,7219
+Melasmothrix naso,30,Unitig,412539,161.083626033,831,7478
+Melasmothrix naso,30,Contig,406593,163.132663376,838,7634
+Melasmothrix naso,30,Scaffold,406086,163.346973301,842,7629
+Melasmothrix naso,40,Unitig,505916,196.793426181,672,15037
+Melasmothrix naso,40,Contig,496605,199.937531841,677,15725
+Melasmothrix naso,40,Scaffold,495840,200.231183446,679,15744
+Melasmothrix naso,50,Unitig,355136,204.660499076,644,8301
+Melasmothrix naso,50,Contig,348181,208.016784374,650,8908
+Melasmothrix naso,50,Scaffold,347634,208.311989046,653,8915
+Melasmothrix naso,60,Unitig,130284,217.070799177,619,2621
+Melasmothrix naso,60,Contig,126745,222.225894513,626,2934
+Melasmothrix naso,60,Scaffold,126169,223.079005144,633,2945
+Melasmothrix naso,65,Unitig,34399,210.430506701,599,397
+Melasmothrix naso,65,Contig,33293,217.107109603,617,487
+Melasmothrix naso,65,Scaffold,32957,218.940619595,630,525
+Paucidentomys vermidax,20,Unitig,1014951,87.0372008107,640,5873
+Paucidentomys vermidax,20,Contig,988508,88.9153937045,671,7569
+Paucidentomys vermidax,20,Scaffold,985549,89.2065802918,687,7730
+Paucidentomys vermidax,30,Unitig,341440,184.34496544,845,7682
+Paucidentomys vermidax,30,Contig,334988,187.470294458,855,7823
+Paucidentomys vermidax,30,Scaffold,334484,187.757913682,857,7839
+Paucidentomys vermidax,40,Unitig,447197,216.225057413,680,16216
+Paucidentomys vermidax,40,Contig,437322,220.454408879,687,16908
+Paucidentomys vermidax,40,Scaffold,436567,220.814750084,689,16940
+Paucidentomys vermidax,50,Unitig,329445,215.888840322,654,9185
+Paucidentomys vermidax,50,Contig,322211,219.934542893,659,9842
+Paucidentomys vermidax,50,Scaffold,321750,220.228584305,661,9849
+Paucidentomys vermidax,60,Unitig,118841,228.201336239,625,3016
+Paucidentomys vermidax,60,Contig,114935,234.882585809,630,3388
+Paucidentomys vermidax,60,Scaffold,114383,235.831417256,633,3417
+Paucidentomys vermidax,65,Unitig,30177,224.847764854,602,472
+Paucidentomys vermidax,65,Contig,28952,234.051291793,612,590
+Paucidentomys vermidax,65,Scaffold,28639,236.140402947,632,601
+Sommeromys macrorhinos,20,Unitig,1082776,80.1747157307,638,4951
+Sommeromys macrorhinos,20,Contig,1062313,81.3981095967,664,6248
+Sommeromys macrorhinos,20,Scaffold,1059509,81.6373622121,682,6444
+Sommeromys macrorhinos,30,Unitig,1396555,114.469357097,679,16323
+Sommeromys macrorhinos,30,Contig,1378566,115.660434103,695,17764
+Sommeromys macrorhinos,30,Scaffold,1375940,115.880714275,701,17945
+Sommeromys macrorhinos,40,Unitig,491841,191.212068534,677,12885
+Sommeromys macrorhinos,40,Contig,482004,194.506636874,685,13673
+Sommeromys macrorhinos,40,Scaffold,480726,194.985378365,689,13715
+Sommeromys macrorhinos,50,Unitig,331511,199.869591054,653,7172
+Sommeromys macrorhinos,50,Contig,324827,203.211026177,658,7813
+Sommeromys macrorhinos,50,Scaffold,324065,203.639865459,662,7823
+Sommeromys macrorhinos,60,Unitig,112509,217.831880116,626,2424
+Sommeromys macrorhinos,60,Contig,109075,223.684492322,634,2717
+Sommeromys macrorhinos,60,Scaffold,108318,225.015934563,641,2749
+Sommeromys macrorhinos,65,Unitig,30400,219.714868421,616,433
+Sommeromys macrorhinos,65,Contig,29417,226.944453887,631,523
+Sommeromys macrorhinos,65,Scaffold,28985,229.719165085,649,543
+Tateomys macrocercus,20,Unitig,2465458,67.4645757502,589,3661
+Tateomys macrocercus,20,Contig,2448029,67.8330869446,600,5039
+Tateomys macrocercus,20,Scaffold,2445929,67.8966016593,609,5425
+Tateomys macrocercus,30,Unitig,1267312,114.416391544,658,12616
+Tateomys macrocercus,30,Contig,1250537,115.624192647,674,14249
+Tateomys macrocercus,30,Scaffold,1247736,115.866303449,682,14457
+Tateomys macrocercus,40,Unitig,453087,186.22167928,655,9900
+Tateomys macrocercus,40,Contig,444340,189.228577216,667,10764
+Tateomys macrocercus,40,Scaffold,443161,189.673218086,672,10765
+Tateomys macrocercus,50,Unitig,289844,194.977191179,638,5330
+Tateomys macrocercus,50,Contig,285338,197.43444967,645,5767
+Tateomys macrocercus,50,Scaffold,284949,197.677352789,647,5802
+Tateomys macrocercus,60,Unitig,86842,215.609301951,608,1667
+Tateomys macrocercus,60,Contig,84957,219.684522759,616,1819
+Tateomys macrocercus,60,Scaffold,84642,220.359632334,619,1866
+Tateomys macrocercus,65,Unitig,22191,214.802532558,601,219
+Tateomys macrocercus,65,Contig,21705,219.609905552,610,270
+Tateomys macrocercus,65,Scaffold,21542,220.935567728,625,285
+Tateomys rhinogradoides,20,Unitig,1437174,73.1855439912,627,4834
+Tateomys rhinogradoides,20,Contig,1411066,74.2352944511,650,6546
+Tateomys rhinogradoides,20,Scaffold,1407590,74.4439645067,665,6931
+Tateomys rhinogradoides,30,Unitig,1744764,109.361290123,673,17736
+Tateomys rhinogradoides,30,Contig,1714281,110.874176404,691,20495
+Tateomys rhinogradoides,30,Scaffold,1708029,111.271124788,702,21058
+Tateomys rhinogradoides,40,Unitig,547727,196.410416138,675,15529
+Tateomys rhinogradoides,40,Contig,530807,201.60395398,690,17122
+Tateomys rhinogradoides,40,Scaffold,527091,202.886992948,697,17332
+Tateomys rhinogradoides,50,Unitig,357437,215.387567599,655,9411
+Tateomys rhinogradoides,50,Contig,348374,219.955277948,667,10234
+Tateomys rhinogradoides,50,Scaffold,347125,220.652592006,671,10292
+Tateomys rhinogradoides,60,Unitig,138903,228.857159313,632,3315
+Tateomys rhinogradoides,60,Contig,134952,234.61976851,642,3662
+Tateomys rhinogradoides,60,Scaffold,134193,235.732042655,647,3705
+Tateomys rhinogradoides,65,Unitig,39606,223.664293289,612,566
+Tateomys rhinogradoides,65,Contig,38584,229.934895293,621,686
+Tateomys rhinogradoides,65,Scaffold,38082,232.34725067,636,737
+Waiomys mamasae,20,Unitig,1852471,62.0721479581,615,3435
+Waiomys mamasae,20,Contig,1823635,62.7906516381,644,4818
+Waiomys mamasae,20,Scaffold,1821559,62.8678121324,654,5034
+Waiomys mamasae,30,Unitig,2355678,94.2552496564,679,11544
+Waiomys mamasae,30,Contig,2327146,95.1189899559,687,12900
+Waiomys mamasae,30,Scaffold,2323490,95.273691731,692,13252
+Waiomys mamasae,40,Unitig,668832,165.091359265,670,9807
+Waiomys mamasae,40,Contig,651158,168.682823524,677,10766
+Waiomys mamasae,40,Scaffold,648358,169.33332665,682,11014
+Waiomys mamasae,50,Unitig,386856,201.623583452,650,5910
+Waiomys mamasae,50,Contig,376464,206.091854732,656,6474
+Waiomys mamasae,50,Scaffold,375123,206.724530354,662,6561
+Waiomys mamasae,60,Unitig,180240,214.186567909,642,2034
+Waiomys mamasae,60,Contig,175493,218.873795536,651,2296
+Waiomys mamasae,60,Scaffold,174909,219.518595384,660,2328
+Waiomys mamasae,65,Unitig,63491,204.025562678,616,402
+Waiomys mamasae,65,Contig,62056,207.935816037,626,497
+Waiomys mamasae,65,Scaffold,61686,209.005771164,645,526
+Chiropodomys gliroides,20,Unitig,1240798,72.5858100996,631,3919
+Chiropodomys gliroides,20,Contig,1222832,73.4163474623,652,5093
+Chiropodomys gliroides,20,Scaffold,1220759,73.5573909347,666,5262
+Chiropodomys gliroides,30,Unitig,1521319,107.704087046,664,13675
+Chiropodomys gliroides,30,Contig,1500770,108.855770038,675,15538
+Chiropodomys gliroides,30,Scaffold,1497612,109.074841147,681,15764
+Chiropodomys gliroides,40,Unitig,561754,172.607650324,658,10822
+Chiropodomys gliroides,40,Contig,549471,175.737540289,668,11943
+Chiropodomys gliroides,40,Scaffold,547682,176.239569677,673,12074
+Chiropodomys gliroides,50,Unitig,358885,185.946932862,637,5677
+Chiropodomys gliroides,50,Contig,352067,188.795763306,644,6336
+Chiropodomys gliroides,50,Scaffold,351297,189.146912726,648,6379
+Chiropodomys gliroides,60,Unitig,116158,199.393438248,610,1581
+Chiropodomys gliroides,60,Contig,113561,203.430288567,619,1838
+Chiropodomys gliroides,60,Scaffold,112643,204.736415046,626,1911
+Chiropodomys gliroides,65,Unitig,28480,193.947015449,604,203
+Chiropodomys gliroides,65,Contig,28096,197.586346811,620,265
+Chiropodomys gliroides,65,Scaffold,27701,199.696978448,634,302
+Lorentzimys nouhuysi,20,Unitig,1323985,78.7816871037,631,5731
+Lorentzimys nouhuysi,20,Contig,1286835,80.5723468821,665,8075
+Lorentzimys nouhuysi,20,Scaffold,1282340,80.8838911677,684,8332
+Lorentzimys nouhuysi,30,Unitig,387653,188.859699267,858,9342
+Lorentzimys nouhuysi,30,Contig,378583,192.857648125,871,9555
+Lorentzimys nouhuysi,30,Scaffold,377418,193.501610946,880,9516
+Lorentzimys nouhuysi,40,Unitig,247469,245.799861801,819,7897
+Lorentzimys nouhuysi,40,Contig,242018,250.668462676,828,8066
+Lorentzimys nouhuysi,40,Scaffold,241363,251.338701458,833,8062
+Lorentzimys nouhuysi,50,Unitig,345889,235.761492849,666,11436
+Lorentzimys nouhuysi,50,Contig,338223,240.278736218,672,12131
+Lorentzimys nouhuysi,50,Scaffold,337372,240.814528177,676,12071
+Lorentzimys nouhuysi,60,Unitig,160571,240.442938015,636,4107
+Lorentzimys nouhuysi,60,Contig,157042,245.433100699,643,4440
+Lorentzimys nouhuysi,60,Scaffold,155868,246.906241178,646,4549
+Lorentzimys nouhuysi,65,Unitig,52537,231.343910006,612,841
+Lorentzimys nouhuysi,65,Contig,51638,236.16561447,622,965
+Lorentzimys nouhuysi,65,Scaffold,51064,238.264530785,631,1018
+Mastacomys fuscus,20,Unitig,1595111,67.3132810193,620,3970
+Mastacomys fuscus,20,Contig,1571144,68.0913652727,640,5442
+Mastacomys fuscus,20,Scaffold,1568366,68.2249226265,654,5761
+Mastacomys fuscus,30,Unitig,1914991,102.09028502,663,14580
+Mastacomys fuscus,30,Contig,1881720,103.466292009,679,17569
+Mastacomys fuscus,30,Scaffold,1875613,103.780247844,688,18243
+Mastacomys fuscus,40,Unitig,656744,169.734412496,665,12903
+Mastacomys fuscus,40,Contig,636212,174.118485662,679,14833
+Mastacomys fuscus,40,Scaffold,632288,175.051582507,686,15112
+Mastacomys fuscus,50,Unitig,410028,191.113638581,643,7634
+Mastacomys fuscus,50,Contig,399515,195.077263682,655,8627
+Mastacomys fuscus,50,Scaffold,398063,195.678324788,661,8721
+Mastacomys fuscus,60,Unitig,152204,205.786595622,623,2511
+Mastacomys fuscus,60,Contig,148289,210.435952768,630,2902
+Mastacomys fuscus,60,Scaffold,147308,211.555869335,636,2991
+Mastacomys fuscus,65,Unitig,42962,201.384572413,602,415
+Mastacomys fuscus,65,Contig,42087,205.991802694,614,508
+Mastacomys fuscus,65,Scaffold,41543,208.117083504,640,560
+Melomys rufescens,20,Unitig,1514669,67.5061396252,621,3843
+Melomys rufescens,20,Contig,1493046,68.2449803958,645,5077
+Melomys rufescens,20,Scaffold,1490731,68.3645111023,659,5297
+Melomys rufescens,30,Unitig,1871114,101.341069545,675,13402
+Melomys rufescens,30,Contig,1847912,102.314779059,683,15166
+Melomys rufescens,30,Scaffold,1844003,102.520577244,690,15525
+Melomys rufescens,40,Unitig,616063,169.694441965,667,10899
+Melomys rufescens,40,Contig,603369,172.587484607,674,11894
+Melomys rufescens,40,Scaffold,601271,173.116539797,678,12060
+Melomys rufescens,50,Unitig,385315,190.353977914,642,6091
+Melomys rufescens,50,Contig,377523,193.479856856,648,6677
+Melomys rufescens,50,Scaffold,376453,193.944322399,653,6752
+Melomys rufescens,60,Unitig,143153,204.166416352,626,1789
+Melomys rufescens,60,Contig,139819,208.34951616,635,2053
+Melomys rufescens,60,Scaffold,138906,209.449649403,644,2106
+Melomys rufescens,65,Unitig,39407,201.799299617,612,305
+Melomys rufescens,65,Contig,38703,205.787975092,632,371
+Melomys rufescens,65,Scaffold,38204,207.964166056,662,405
+Hydromys chrysogaster,20,Unitig,1868225,57.4789155482,606,1806
+Hydromys chrysogaster,20,Contig,1866511,57.5169854343,611,1939
+Hydromys chrysogaster,20,Scaffold,1866424,57.5202172711,612,1948
+Hydromys chrysogaster,30,Unitig,2513684,87.0903053049,651,4781
+Hydromys chrysogaster,30,Contig,2512583,87.1181935084,652,4852
+Hydromys chrysogaster,30,Scaffold,2512536,87.1202299191,653,4841
+Hydromys chrysogaster,40,Unitig,837539,121.172559129,609,1734
+Hydromys chrysogaster,40,Contig,836500,121.281354453,611,1805
+Hydromys chrysogaster,40,Scaffold,836430,121.290425977,612,1809
+Hydromys chrysogaster,50,Unitig,382449,128.867088161,604,119
+Hydromys chrysogaster,50,Contig,381993,128.976887011,614,143
+Hydromys chrysogaster,50,Scaffold,381913,128.99643898,627,152
+Hydromys chrysogaster,60,Unitig,40475,110.03577517,696,17
+Hydromys chrysogaster,60,Contig,40371,110.206806866,768,23
+Hydromys chrysogaster,60,Scaffold,40329,110.279674676,783,28
+Hydromys chrysogaster,65,Unitig,6159,83.3442117227,790,6
+Hydromys chrysogaster,65,Contig,6136,83.615547588,790,6
+Hydromys chrysogaster,65,Scaffold,6115,83.6881439084,768,9
+Apodemus sylvaticus,20,Unitig,1140904,78.6888406036,635,5203
+Apodemus sylvaticus,20,Contig,1119291,79.883253774,663,6642
+Apodemus sylvaticus,20,Scaffold,1116233,80.1332974388,679,6860
+Apodemus sylvaticus,30,Unitig,1370828,116.369524112,692,17799
+Apodemus sylvaticus,30,Contig,1352422,117.629344983,707,19173
+Apodemus sylvaticus,30,Scaffold,1349992,117.838215338,713,19298
+Apodemus sylvaticus,40,Unitig,511068,190.215849946,685,14172
+Apodemus sylvaticus,40,Contig,501905,193.133198514,695,14869
+Apodemus sylvaticus,40,Scaffold,500946,193.476091235,698,14873
+Apodemus sylvaticus,50,Unitig,344192,199.745610008,660,8021
+Apodemus sylvaticus,50,Contig,338264,202.604113947,667,8526
+Apodemus sylvaticus,50,Scaffold,337779,202.863662335,669,8547
+Apodemus sylvaticus,60,Unitig,117360,216.231722904,630,2621
+Apodemus sylvaticus,60,Contig,114092,221.653867055,636,2953
+Apodemus sylvaticus,60,Scaffold,113529,222.554105119,641,2982
+Apodemus sylvaticus,65,Unitig,30783,214.053471072,616,442
+Apodemus sylvaticus,65,Contig,29970,220.606906907,631,521
+Apodemus sylvaticus,65,Scaffold,29586,222.841749476,643,564
+Archboldomys luzonensis,20,Unitig,991453,87.4753377114,640,5594
+Archboldomys luzonensis,20,Contig,969441,89.068860302,666,7089
+Archboldomys luzonensis,20,Scaffold,966448,89.3812807311,685,7271
+Archboldomys luzonensis,30,Unitig,337545,183.924208624,835,7471
+Archboldomys luzonensis,30,Contig,331518,186.853531332,846,7608
+Archboldomys luzonensis,30,Scaffold,330802,187.281476533,854,7557
+Archboldomys luzonensis,40,Unitig,454926,208.711641014,687,14717
+Archboldomys luzonensis,40,Contig,446227,212.206134994,696,15334
+Archboldomys luzonensis,40,Scaffold,445284,212.629723951,698,15411
+Archboldomys luzonensis,50,Unitig,328996,210.189519022,657,8284
+Archboldomys luzonensis,50,Contig,322956,213.454089721,667,8741
+Archboldomys luzonensis,50,Scaffold,322407,213.780482434,669,8753
+Archboldomys luzonensis,60,Unitig,117524,222.997728124,624,2743
+Archboldomys luzonensis,60,Contig,114489,228.075352217,636,2981
+Archboldomys luzonensis,60,Scaffold,113997,228.907137907,640,3008
+Archboldomys luzonensis,65,Unitig,30608,219.465956613,616,434
+Archboldomys luzonensis,65,Contig,29732,225.778286022,625,514
+Archboldomys luzonensis,65,Scaffold,29466,227.479671486,638,529
+Bunomys chrysocomus,20,Unitig,1377370,72.8263865192,631,4937
+Bunomys chrysocomus,20,Contig,1351092,73.9151812016,657,6588
+Bunomys chrysocomus,20,Scaffold,1348170,74.096910627,672,6838
+Bunomys chrysocomus,30,Unitig,450304,156.342632977,819,7638
+Bunomys chrysocomus,30,Contig,442532,158.69081106,828,7839
+Bunomys chrysocomus,30,Scaffold,441703,159.002909195,833,7840
+Bunomys chrysocomus,40,Unitig,538442,190.699384521,682,13847
+Bunomys chrysocomus,40,Contig,527472,194.0377821,689,14599
+Bunomys chrysocomus,40,Scaffold,526211,194.468868952,692,14698
+Bunomys chrysocomus,50,Unitig,362204,206.535480006,650,7956
+Bunomys chrysocomus,50,Contig,354728,210.090638461,656,8491
+Bunomys chrysocomus,50,Scaffold,354024,210.466406232,659,8535
+Bunomys chrysocomus,60,Unitig,146502,213.499624579,623,2293
+Bunomys chrysocomus,60,Contig,143250,217.738059337,631,2559
+Bunomys chrysocomus,60,Scaffold,142435,218.745687507,640,2613
+Bunomys chrysocomus,65,Unitig,39117,200.067515403,616,290
+Bunomys chrysocomus,65,Contig,38325,204.230215264,618,366
+Bunomys chrysocomus,65,Scaffold,37953,205.789239322,638,408
+Haeromys minahassae,20,Unitig,1124210,77.1753764866,640,4875
+Haeromys minahassae,20,Contig,1105268,78.2169220497,663,6114
+Haeromys minahassae,20,Scaffold,1102622,78.4339229582,681,6295
+Haeromys minahassae,30,Unitig,1274406,116.879963685,692,16718
+Haeromys minahassae,30,Contig,1259518,118.020333175,703,17852
+Haeromys minahassae,30,Scaffold,1257975,118.17303444,707,17883
+Haeromys minahassae,40,Unitig,548779,175.733783545,677,12478
+Haeromys minahassae,40,Contig,538727,178.4809616,682,13309
+Haeromys minahassae,40,Scaffold,537798,178.768353545,685,13309
+Haeromys minahassae,50,Unitig,371063,182.579281685,649,6456
+Haeromys minahassae,50,Contig,362972,185.877389992,655,7200
+Haeromys minahassae,50,Scaffold,362259,186.205849958,658,7249
+Haeromys minahassae,60,Unitig,115493,199.119028859,623,1891
+Haeromys minahassae,60,Contig,111378,205.511654007,630,2299
+Haeromys minahassae,60,Scaffold,110257,207.201275202,641,2356
+Haeromys minahassae,65,Unitig,27953,194.397810611,612,261
+Haeromys minahassae,65,Contig,27038,201.763185147,631,370
+Haeromys minahassae,65,Scaffold,26513,204.783200694,675,388
+Maxomys surifer,20,Unitig,1442183,70.7633282323,633,4686
+Maxomys surifer,20,Contig,1417621,71.7089278446,664,6251
+Maxomys surifer,20,Scaffold,1414119,71.9155346898,681,6514
+Maxomys surifer,30,Unitig,1707717,107.850906795,689,17343
+Maxomys surifer,30,Contig,1686299,108.930705053,703,18987
+Maxomys surifer,30,Scaffold,1682984,109.150566494,710,19167
+Maxomys surifer,40,Unitig,588083,181.015300561,686,13763
+Maxomys surifer,40,Contig,576074,184.139827522,693,14767
+Maxomys surifer,40,Scaffold,574517,184.60871828,698,14843
+Maxomys surifer,50,Unitig,387281,195.689791134,658,7641
+Maxomys surifer,50,Contig,378818,199.210378071,664,8395
+Maxomys surifer,50,Scaffold,377848,199.662070462,668,8425
+Maxomys surifer,60,Unitig,140046,209.094547506,630,2348
+Maxomys surifer,60,Contig,135765,214.981335396,640,2775
+Maxomys surifer,60,Scaffold,134612,216.456541764,648,2863
+Maxomys surifer,65,Unitig,36531,204.019079686,614,355
+Maxomys surifer,65,Contig,35828,209.22136318,630,464
+Maxomys surifer,65,Scaffold,35207,212.044252563,647,531
+Niviventer lepturus,20,Unitig,1258452,75.1564414058,631,4751
+Niviventer lepturus,20,Contig,1236639,76.1826984269,659,6136
+Niviventer lepturus,20,Scaffold,1233995,76.3612850943,672,6374
+Niviventer lepturus,30,Unitig,1622692,109.093238273,685,16649
+Niviventer lepturus,30,Contig,1606320,109.963853404,694,17914
+Niviventer lepturus,30,Scaffold,1603843,110.129669176,699,18096
+Niviventer lepturus,40,Unitig,524637,188.3813837,674,13264
+Niviventer lepturus,40,Contig,515263,191.25252735,680,14009
+Niviventer lepturus,40,Scaffold,514046,191.669224155,684,14026
+Niviventer lepturus,50,Unitig,342857,204.474293948,647,7377
+Niviventer lepturus,50,Contig,336345,207.705049874,652,7883
+Niviventer lepturus,50,Scaffold,335697,208.06473695,654,7939
+Niviventer lepturus,60,Unitig,128201,215.903315887,623,2243
+Niviventer lepturus,60,Contig,125077,220.484533527,630,2510
+Niviventer lepturus,60,Scaffold,124541,221.277860303,635,2546
+Niviventer lepturus,65,Unitig,32374,205.526255637,600,288
+Niviventer lepturus,65,Contig,31566,210.643698917,615,352
+Niviventer lepturus,65,Scaffold,31271,212.241501711,634,376
+Paruromys dominator,20,Unitig,2101410,70.5920753209,601,4995
+Paruromys dominator,20,Contig,2083288,71.0670416188,615,6845
+Paruromys dominator,20,Scaffold,2080656,71.16922932,626,7231
+Paruromys dominator,30,Unitig,1128017,115.504408178,673,13467
+Paruromys dominator,30,Contig,1117798,116.351904369,684,14421
+Paruromys dominator,30,Scaffold,1116844,116.453442916,688,14426
+Paruromys dominator,40,Unitig,461549,172.499613259,664,9664
+Paruromys dominator,40,Contig,455603,174.360932654,671,10238
+Paruromys dominator,40,Scaffold,455115,174.539083528,673,10264
+Paruromys dominator,50,Unitig,291524,178.62933412,636,4913
+Paruromys dominator,50,Contig,286986,180.885935202,642,5393
+Paruromys dominator,50,Scaffold,286705,181.054268325,644,5414
+Paruromys dominator,60,Unitig,81099,195.183627418,607,1422
+Paruromys dominator,60,Contig,78936,199.8844887,616,1634
+Paruromys dominator,60,Scaffold,78414,200.947968475,621,1692
+Paruromys dominator,65,Unitig,20067,182.188917128,599,150
+Paruromys dominator,65,Contig,19430,188.266443644,612,214
+Paruromys dominator,65,Scaffold,19208,189.942836318,635,239
+andrewsii,20,Unitig,1543812,61.035763422,604,1415
+andrewsii,20,Contig,1537488,61.2287497528,611,1689
+andrewsii,20,Scaffold,1537130,61.245024819,615,1750
+andrewsii,30,Unitig,734651,106.804059342,675,3535
+andrewsii,30,Contig,728500,107.499523679,682,3844
+andrewsii,30,Scaffold,727984,107.57378871,688,3866
+andrewsii,40,Unitig,1055722,133.450773973,619,4690
+andrewsii,40,Contig,1043200,134.642602569,619,5716
+andrewsii,40,Scaffold,1041558,134.812912003,621,5976
+andrewsii,50,Unitig,585767,178.236764789,623,5271
+andrewsii,50,Contig,573268,181.146441106,628,6317
+andrewsii,50,Scaffold,571610,181.551082031,631,6524
+andrewsii,60,Unitig,399081,207.931432466,627,4753
+andrewsii,60,Contig,390616,211.254592746,632,5460
+andrewsii,60,Scaffold,389599,211.671652135,634,5586
+andrewsii,65,Unitig,305413,225.965165203,632,4218
+andrewsii,65,Contig,299061,229.504104514,637,4721
+andrewsii,65,Scaffold,298269,229.97719173,639,4811
+exulans,20,Unitig,1423678,72.4765515798,639,4676
+exulans,20,Contig,1402924,73.3140683316,657,5803
+exulans,20,Scaffold,1401558,73.383345534,664,5942
+exulans,30,Unitig,649039,137.078483727,837,8626
+exulans,30,Contig,639729,138.728133319,853,8848
+exulans,30,Scaffold,638923,138.903653492,858,8836
+exulans,40,Unitig,449822,183.70343158,840,8697
+exulans,40,Contig,442598,186.158308442,854,8877
+exulans,40,Scaffold,441956,186.413762909,857,8892
+exulans,50,Unitig,349565,222.164847739,829,8815
+exulans,50,Contig,344537,224.785770469,836,8946
+exulans,50,Scaffold,343979,225.112294646,839,8949
+exulans,60,Unitig,277209,254.23001057,808,7956
+exulans,60,Contig,274195,256.478885465,811,8062
+exulans,60,Scaffold,273843,256.775028027,813,8070
+exulans,65,Unitig,250888,264.651179012,786,7381
+exulans,65,Contig,248478,266.721053775,788,7486
+exulans,65,Scaffold,248209,266.988549972,790,7488
+hoffmani,20,Unitig,1233332,79.0913598285,641,5093
+hoffmani,20,Contig,1204646,80.5878996817,671,6454
+hoffmani,20,Scaffold,1202787,80.705892232,683,6594
+hoffmani,30,Unitig,633706,143.764116167,843,8940
+hoffmani,30,Contig,620232,146.374158379,864,9258
+hoffmani,30,Scaffold,619184,146.61435696,872,9238
+hoffmani,40,Unitig,429106,196.120215052,856,9065
+hoffmani,40,Contig,418996,200.047325034,870,9309
+hoffmani,40,Scaffold,418089,200.451006843,874,9335
+hoffmani,50,Unitig,304990,248.672907308,855,8898
+hoffmani,50,Contig,298455,253.207592434,864,9064
+hoffmani,50,Scaffold,297815,253.700737035,867,9068
+hoffmani,60,Unitig,265382,272.63622627,827,8465
+hoffmani,60,Contig,261323,276.137684016,831,8619
+hoffmani,60,Scaffold,260844,276.588945883,834,8623
+hoffmani,65,Unitig,245864,280.53998552,803,8022
+hoffmani,65,Contig,242581,283.648810088,805,8159
+hoffmani,65,Scaffold,242234,284.018894953,808,8149
+leucopus,20,Unitig,909994,83.6062325686,632,3570
+leucopus,20,Contig,897355,84.558638443,648,4246
+leucopus,20,Scaffold,896558,84.6266911901,654,4309
+leucopus,30,Unitig,426871,152.336724678,755,6078
+leucopus,30,Contig,420188,154.375700877,771,6269
+leucopus,30,Scaffold,419697,154.542255484,775,6277
+leucopus,40,Unitig,308704,194.639768192,757,5831
+leucopus,40,Contig,303532,197.378757429,770,5995
+leucopus,40,Scaffold,303094,197.632506747,774,5988
+leucopus,50,Unitig,228729,231.904227273,746,5285
+leucopus,50,Contig,225121,234.92142892,752,5419
+leucopus,50,Scaffold,224804,235.216673191,755,5431
+leucopus,60,Unitig,188778,247.887306784,725,4345
+leucopus,60,Contig,186625,250.179172137,729,4447
+leucopus,60,Scaffold,186426,250.404600217,731,4450
+leucopus,65,Unitig,232176,281.106023017,674,6920
+leucopus,65,Contig,228783,284.468465751,677,7103
+leucopus,65,Scaffold,228415,284.854471029,678,7139
+lutreolus,20,Unitig,993625,81.5781758712,634,3488
+lutreolus,20,Contig,980430,82.4609212284,648,4165
+lutreolus,20,Scaffold,979822,82.5130595149,653,4219
+lutreolus,30,Unitig,525167,139.045945385,755,6138
+lutreolus,30,Contig,518167,140.606101894,765,6375
+lutreolus,30,Scaffold,517686,140.737982097,769,6395
+lutreolus,40,Unitig,375392,179.836541535,758,5959
+lutreolus,40,Contig,370000,181.955964865,767,6153
+lutreolus,40,Scaffold,369539,182.172374228,771,6175
+lutreolus,50,Unitig,267934,220.380575067,743,5509
+lutreolus,50,Contig,264441,222.719555591,749,5625
+lutreolus,50,Scaffold,264141,222.94507479,752,5633
+lutreolus,60,Unitig,221278,237.764188035,718,4528
+lutreolus,60,Contig,219188,239.535353213,719,4635
+lutreolus,60,Scaffold,219008,239.713439692,721,4635
+lutreolus,65,Unitig,271974,265.622794826,667,6931
+lutreolus,65,Contig,268118,268.640982702,669,7149
+lutreolus,65,Scaffold,267695,268.998621566,670,7200
+musschenbroekii,20,Unitig,1222434,70.701662421,619,2603
+musschenbroekii,20,Contig,1212585,71.1554505457,628,3092
+musschenbroekii,20,Scaffold,1212110,71.1860078706,633,3139
+musschenbroekii,30,Unitig,582449,127.258616634,716,5307
+musschenbroekii,30,Contig,575452,128.50954554,730,5578
+musschenbroekii,30,Scaffold,574961,128.611695402,735,5589
+musschenbroekii,40,Unitig,411197,165.154286145,726,5153
+musschenbroekii,40,Contig,405269,167.065578665,739,5367
+musschenbroekii,40,Scaffold,404825,167.233118014,742,5394
+musschenbroekii,50,Unitig,279292,206.373576758,728,4650
+musschenbroekii,50,Contig,275543,208.587940902,736,4799
+musschenbroekii,50,Scaffold,275238,208.794323458,738,4820
+musschenbroekii,60,Unitig,332791,236.938556031,660,6597
+musschenbroekii,60,Contig,327850,239.705279854,665,6887
+musschenbroekii,60,Scaffold,327317,240.029616549,667,6918
+musschenbroekii,65,Unitig,273689,252.321744754,659,5678
+musschenbroekii,65,Contig,270258,254.80155259,662,5859
+musschenbroekii,65,Scaffold,269942,255.05558231,664,5881
+praetor,20,Unitig,1073181,73.2006176032,621,2549
+praetor,20,Contig,1064364,73.6798454288,631,2962
+praetor,20,Scaffold,1063874,73.7132357779,635,3018
+praetor,30,Unitig,523024,128.616162929,721,4716
+praetor,30,Contig,516830,129.864129404,732,4907
+praetor,30,Scaffold,516336,129.977435236,737,4920
+praetor,40,Unitig,360327,167.626000827,729,4551
+praetor,40,Contig,355657,169.371453395,738,4717
+praetor,40,Scaffold,355256,169.543101313,741,4742
+praetor,50,Unitig,413479,208.071938357,659,7342
+praetor,50,Contig,407091,210.662790383,664,7737
+praetor,50,Scaffold,406364,210.976046106,665,7794
+praetor,60,Unitig,304264,234.605921174,657,5848
+praetor,60,Contig,300528,236.877964782,659,6090
+praetor,60,Scaffold,300118,237.146002572,660,6123
+praetor,65,Unitig,249349,248.633658046,654,4928
+praetor,65,Contig,246438,250.935054659,656,5106
+praetor,65,Scaffold,246106,251.216447384,657,5134
+vilosissimus,20,Unitig,1089905,77.7818341966,626,3196
+vilosissimus,20,Contig,1076242,78.5710592971,640,3915
+vilosissimus,20,Scaffold,1075502,78.6234549076,646,3987
+vilosissimus,30,Unitig,581543,131.869676017,735,6069
+vilosissimus,30,Contig,572929,133.491991154,751,6396
+vilosissimus,30,Scaffold,572230,133.646919945,758,6392
+vilosissimus,40,Unitig,403015,174.057273302,744,6056
+vilosissimus,40,Contig,396480,176.36224778,757,6291
+vilosissimus,40,Scaffold,395991,176.560591024,763,6285
+vilosissimus,50,Unitig,279081,217.269305327,746,5557
+vilosissimus,50,Contig,275000,219.840334545,754,5671
+vilosissimus,50,Scaffold,274585,220.126146731,757,5683
+vilosissimus,60,Unitig,223492,238.630474469,719,4616
+vilosissimus,60,Contig,221105,240.641165962,725,4692
+vilosissimus,60,Scaffold,220861,240.871036534,727,4698
+vilosissimus,65,Unitig,275205,265.75792591,669,7065
+vilosissimus,65,Contig,271057,268.95841834,671,7310
+vilosissimus,65,Scaffold,270611,269.323493871,673,7324

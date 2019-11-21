@@ -1,0 +1,97 @@
+Species,type,count,avg len,N50,L50
+Apomys lubangensis,Contig,147964,603.7972885,641,104079
+Apomys lubangensis,Scaffold,147047,607.6271124,644,103620
+Batomys salomonseni,Contig,151472,584.1834134,611,105352
+Batomys salomonseni,Scaffold,150838,586.6813933,613,105043
+Bulimus bagobus,Contig,143350,614.938563,655,100565
+Bulimus bagobus,Scaffold,142427,618.992347,659,100052
+Chrotomys mindorensis,Contig,154441,644.9834435,679,108900
+Chrotomys mindorensis,Scaffold,153594,648.597901,682,108441
+Phloeomys pallidus,Contig,144880,603.7864785,633,101249
+Phloeomys pallidus,Scaffold,143939,607.8044171,637,100750
+Rhynchomys isarogensis,Contig,170161,504.5864681,508,115709
+Rhynchomys isarogensis,Scaffold,169944,505.2441451,508,115629
+Sundamys meulleri,Contig,133925,596.5764943,638,93508
+Sundamys meulleri,Scaffold,132799,601.7275431,642,92915
+Taeromys punicans,Contig,144153,611.5346264,644,100805
+Taeromys punicans,Scaffold,143313,615.1823073,647,100361
+Hyorhinomys stuempkei,Contig,145570,607.6860411,649,102145
+Hyorhinomys stuempkei,Scaffold,144387,612.7523253,653,101489
+Hybomys univittatus,Contig,146009,553.0915355,591,102374
+Hybomys univittatus,Scaffold,144929,557.2907907,594,101824
+Colomys goslingi,Contig,150981,627.8492526,661,107626
+Colomys goslingi,Scaffold,149867,632.5923118,666,107079
+Malacomys longipes,Contig,156682,608.3549674,643,111130
+Malacomys longipes,Scaffold,155650,612.4564215,647,110628
+Hylomyscus vulcanorum,Contig,161584,615.5960367,643,114501
+Hylomyscus vulcanorum,Scaffold,160957,618.0336612,645,114197
+Praomys degraaffi,Contig,147910,569.3221756,601,104836
+Praomys degraaffi,Scaffold,145729,577.9960818,609,103784
+Grammomys sp,Contig,155344,636.0328432,673,110066
+Grammomys sp,Scaffold,154247,640.630223,677,109496
+Lemniscomys striatus,Contig,145791,603.3845368,640,102355
+Lemniscomys striatus,Scaffold,144830,607.4577228,643,101873
+Berylymys bowersi,Contig,177603,537.7542609,553,123061
+Berylymys bowersi,Scaffold,177351,538.5332589,553,122951
+Crunomys celebensis,Contig,148923,615.6395856,648,103678
+Crunomys celebensis,Scaffold,147728,620.7079159,652,103053
+Echiothrix centrosa,Contig,142072,554.0906864,585,99106
+Echiothrix centrosa,Scaffold,141314,557.1192875,588,98737
+Gracillimus radix,Contig,158064,636.4395561,656,110631
+Gracillimus radix,Scaffold,157422,639.0772764,658,110310
+Leopoldomys sabanus,Contig,150703,619.2616736,644,105578
+Leopoldomys sabanus,Scaffold,150090,621.8343461,646,105281
+Margaretamys parvus,Contig,139740,597.1985902,631,97539
+Margaretamys parvus,Scaffold,138983,600.5113359,633,97137
+Melasmothrix naso,Contig,151821,596.8849764,622,105889
+Melasmothrix naso,Scaffold,151130,599.6620393,624,105559
+Paucidentomys vermidax,Contig,146818,624.5686564,653,102479
+Paucidentomys vermidax,Scaffold,146021,628.036981,656,102060
+Sommeromys macrorhinos,Contig,145142,590.6260214,626,101714
+Sommeromys macrorhinos,Scaffold,144227,594.4385448,629,101250
+Tateomys macrocercus,Contig,140416,549.9833993,585,97829
+Tateomys macrocercus,Scaffold,139619,553.182955,588,97414
+Tateomys rhinogradoides,Contig,153339,620.5707159,658,108198
+Tateomys rhinogradoides,Scaffold,152601,623.6208806,661,107817
+Waiomys mamasae,Contig,174040,506.1308952,516,120116
+Waiomys mamasae,Scaffold,173909,506.5198753,516,120066
+Chiropodomys gliroides,Contig,147630,572.637743,604,103215
+Chiropodomys gliroides,Scaffold,146949,575.3391789,606,102877
+Lorentzimys nouhuysi,Contig,159179,632.0929268,659,111911
+Lorentzimys nouhuysi,Scaffold,158682,634.1055003,661,111679
+Mastacomys fuscus,Contig,155770,593.218553,626,109889
+Mastacomys fuscus,Scaffold,155128,595.7159249,629,109554
+Melomys rufescens,Contig,158649,551.8693279,579,111752
+Melomys rufescens,Scaffold,158271,553.2119087,581,111567
+Hydromys chrysogaster,Contig,152501,417.6282647,426,104574
+Hydromys chrysogaster,Scaffold,150961,421.9906333,430,104081
+Apodemus sylvaticus,Contig,143320,609.4451996,650,101259
+Apodemus sylvaticus,Scaffold,142505,612.9910108,653,100799
+Archboldomys luzonensis,Contig,148720,604.1392012,640,104533
+Archboldomys luzonensis,Scaffold,147780,608.0498985,643,104057
+Bunomys chrysocomus,Contig,159760,573.6596895,603,111756
+Bunomys chrysocomus,Scaffold,159202,575.7057512,605,111483
+Haeromys minahassae,Contig,144634,594.0994856,634,101758
+Haeromys minahassae,Scaffold,143462,599.0404776,639,101164
+Maxomys surifer,Contig,151502,609.0676823,647,106989
+Maxomys surifer,Scaffold,150795,611.9720415,649,106613
+Niviventer lepturus,Contig,151226,574.4042956,606,105738
+Niviventer lepturus,Scaffold,150574,576.9363436,608,105423
+Paruromys dominator,Contig,126586,565.5055693,606,88278
+Paruromys dominator,Scaffold,125782,569.1888187,609,87838
+andrewsii,Contig,191708,458.4767198,491,133431
+andrewsii,Scaffold,191561,458.8403589,491,133364
+exulans,Contig,231233,488.632427,587,172276
+exulans,Scaffold,231140,488.8386952,587,172233
+hoffmani,Contig,200515,565.4609131,610,144383
+hoffmani,Scaffold,200468,565.6001856,610,144358
+leucopus,Contig,170512,484.6618303,505,118842
+leucopus,Scaffold,170435,484.8892364,505,118806
+lutreolus,Contig,195978,458.0262836,499,138361
+lutreolus,Scaffold,195891,458.2391789,499,138328
+musschenbroekii,Contig,184588,469.7051433,491,127864
+musschenbroekii,Scaffold,184494,469.9538305,492,127826
+praetor,Contig,167476,475.7353949,493,115491
+praetor,Scaffold,167397,475.9692647,493,115460
+vilosissimus,Contig,183580,481.6627846,503,127928
+vilosissimus,Scaffold,183514,481.8569373,503,127903

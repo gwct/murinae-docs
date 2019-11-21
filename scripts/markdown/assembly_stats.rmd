@@ -1,0 +1,192 @@
+---
+#title: "Exome assembly stats"
+#author: "gwct"
+#date: "11/21/2019"
+output: 
+  html_document:
+    includes:
+      in_header: '../html-chunks/rmd_header.html'
+    df_print: paged
+    code_folding: hide
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+
+render_opt = F
+
+targets = 203198
+target_avg_len = 267.5448577249776
+target_min_len = 100
+
+tiles = 470359
+tile_avg_len = 109.8747
+tile_min_len = 57
+# Target and tile info
+
+htmltools::includeHTML("../html-chunks/nav.html")
+
+```
+
+# Exome assembly stats
+
+Comparison between Abyss and Spades assemblies for 48 exomes made up of a myriad of sequence types (NextSeq, MiSeq, HiSeq, etc). Average read lengths range from 75-100bp. See MultiQC reports [here](summary_48.html).
+
+### Abyss
+
+```{r fig1, out.width="100%", fig.align = "center"}
+abyss_data = read.csv("../../data/abyss-stats.csv", header=TRUE)
+abyss_data$type = factor(abyss_data$type, levels=c("Unitig","Contig","Scaffold"), ordered=TRUE)
+
+####################
+# Abyss contig count distributions
+contig_p = ggplot(abyss_data, aes(x=as.factor(k), y=count, fill=type, color=type)) +
+  geom_hline(yintercept=targets, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=tiles, linetype=2, size=1, color="#9494b8") +
+  geom_boxplot(outlier.colour="transparent", color="#666666", size=0.3) +
+  geom_point(size=0.75, position=position_jitterdodge() , alpha=0.4, color="#999999") +
+  annotate("text", x=1, y=targets-200000, label="# targets", color="#666666", size=4) +
+  annotate("text", x=6, y=tiles+200000, label="# tiles", color="#9494b8", size=4) +
+  ggtitle("Abyss assembly counts") +
+  labs(x="kmer length", y="# Contigs") +
+  scale_fill_manual(name="Assembly level", labels=c("Unitig","Contig","Scaffold"), values=c("#5c88da","#ffcd00","#cc1c00")) +
+  theme_classic() +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="right",
+        legend.key.width = unit(0.75,  unit = "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        #legend.title = element_blank(),
+        legend.text=element_text(size=12),
+        plot.title = element_text(size=18),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+
+print(contig_p)
+```
+
+```{r fig2, out.width="100%", fig.align = "center"}
+####################
+# Abyss contig length distributions
+len_p = ggplot(abyss_data, aes(x=as.factor(k), y=avg.len, fill=type, color=type)) +
+  geom_hline(yintercept=target_avg_len, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=target_min_len, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=tile_avg_len, linetype=2, size=1, color="#9494b8") +
+  geom_hline(yintercept=tile_min_len, linetype=2, size=1, color="#9494b8") +
+  geom_boxplot(outlier.colour="transparent", color="#666666", size=0.3) +
+  geom_point(size=0.5, position=position_jitterdodge() , alpha=0.4, color="#999999") +
+  annotate("text", x=1.4, y=target_avg_len-5, label="Avg. target len", color="#666666", size=4) +
+  annotate("text", x=5.4, y=target_min_len-5, label="Min. target len", color="#666666", size=4) +
+  annotate("text", x=5.5, y=tile_avg_len+10, label="Avg. tile len", color="#9494b8", size=4) +
+  annotate("text", x=5.5, y=tile_min_len-5, label="Min. tile len", color="#9494b8", size=4) +
+  ggtitle("Abyss assembly lengths") +
+  labs(x="kmer length", y="Average length") +
+  scale_fill_manual(name="Assembly level", labels=c("Unitig","Contig","Scaffold"), values=c("#5c88da","#ffcd00","#cc1c00")) +
+  theme_classic() +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="right",
+        legend.key.width = unit(0.75,  unit = "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        #legend.title = element_blank(),
+        legend.text=element_text(size=12),
+        plot.title = element_text(size=18),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+
+print(len_p)
+```
+
+### Spades
+
+```{r fig3, out.width="100%", fig.align = "center"}
+spades_data = read.csv("../../data/spades-stats.csv", header=TRUE)
+spades_data$type = factor(spades_data$type, levels=c("Contig","Scaffold"), ordered=TRUE)
+
+####################
+# Abyss contig count distributions
+contig_p = ggplot(spades_data, aes(x=1, y=count, fill=type, color=type)) +
+  geom_hline(yintercept=targets, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=tiles, linetype=2, size=1, color="#9494b8") +
+  geom_boxplot(outlier.colour="transparent", color="#666666", size=0.3) +
+  geom_point(size=2, position=position_jitterdodge() , alpha=0.4, color="#999999") +
+  annotate("text", x=0.6, y=targets-10000, label="# targets", color="#666666", size=4) +
+  annotate("text", x=0.6, y=tiles-10000, label="# tiles", color="#9494b8", size=4) +
+  ggtitle("Spades assembly counts") +
+  labs(x="", y="# Contigs") +
+  scale_fill_manual(name="Assembly level", labels=c("Contig","Scaffold"), values=c("#ffcd00","#cc1c00")) +
+  theme_classic() +
+  theme(axis.text=element_text(size=12),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="right",
+        legend.key.width = unit(0.75,  unit = "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        #legend.title = element_blank(),
+        legend.text=element_text(size=12),
+        plot.title = element_text(size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+
+print(contig_p)
+```
+
+```{r fig4, out.width="100%", fig.align = "center"}
+len_p = ggplot(spades_data, aes(x=1, y=avg.len, fill=type, color=type)) +
+  geom_hline(yintercept=target_avg_len, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=target_min_len, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=tile_avg_len, linetype=2, size=1, color="#9494b8") +
+  geom_hline(yintercept=tile_min_len, linetype=2, size=1, color="#9494b8") +
+  geom_boxplot(outlier.colour="transparent", color="#666666", size=0.3) +
+  geom_point(size=2, position=position_jitterdodge() , alpha=0.4, color="#999999") +
+  annotate("text", x=0.65, y=target_avg_len-10, label="Avg. target len", color="#666666", size=4) +
+  annotate("text", x=0.65, y=target_min_len-10, label="Min. target len", color="#666666", size=4) +
+  annotate("text", x=0.65, y=tile_avg_len+15, label="Avg. tile len", color="#9494b8", size=4) +
+  annotate("text", x=0.65, y=tile_min_len-10, label="Min. tile len", color="#9494b8", size=4) +
+  ggtitle("Spades assembly lengths") +
+  labs(x="", y="Average length") +
+  scale_fill_manual(name="Assembly level", labels=c("Contig","Scaffold"), values=c("#ffcd00","#cc1c00")) +
+  theme_classic() +
+  theme(axis.text=element_text(size=12), 
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="right",
+        legend.key.width = unit(0.75,  unit = "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        #legend.title = element_blank(),
+        legend.text=element_text(size=12),
+        plot.title = element_text(size=18),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+
+print(len_p)
+```
+
+
+```{r footer}
+htmltools::includeHTML("../html-chunks/footer.html")
+```

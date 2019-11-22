@@ -50,8 +50,10 @@ in_data = data.frame(
   "filtered.avg.read.len"=filtered_data$avg.read.len,
   "mouse.reads"=filtered_data$reads.mapped.mouse,
   "mouse.depth"=filtered_data$read.depth.mouse.targets,
+  "mouse.dist"=filtered_data$Mouse.dist,
   "rat.reads"=filtered_data$reads.mapped.rat,
   "rat.depth"=filtered_data$read.depth.rat.targets,
+  "rat.dist"=filtered_data$Rat.dist,
   "hiseq.only"=filtered_data$hiseq.only)
 
 
@@ -168,9 +170,83 @@ depth_p = ggplot(in_data, aes(x=unfiltered.reads, y=mouse.depth)) +
 print(depth_p)
 ```
 
-### Total reads vs. average read depth (HiSeq only)
+### Mouse depth vs. Mouse distance
+##### Distance calculated as total branch length separating nodes in Emily's tree.
 
 ```{r fig3, out.width="100%", fig.align = "center", echo=FALSE, warning=FALSE}
+in_data$depth.diff = in_data$mouse.depth - in_data$rat.depth
+in_data$dist.diff = in_data$mouse.dist - in_data$rat.dist
+
+diff_p = ggplot(in_data, aes(x=mouse.dist, y=mouse.depth)) +
+  geom_smooth(method="glm", alpha=0, fullrange=T, color="#666666") +
+  geom_point(size=2, alpha=0.6, color="#333333") +
+
+  labs(x="Mouse distance", y="Mouse depth") +
+  
+  #scale_color_manual(name="Mapped to: ", values=c("Mouse"="#333333", "Rat"="#db6d00")) +
+  
+  theme_classic() +
+  guides(colour = guide_legend(override.aes = list(size=4))) +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="bottom",
+        legend.text=element_text(size=14),
+        #legend.spacing.x=unit(1, 'cm'),
+        legend.title=element_text(size=14, face="bold"),
+        legend.margin=margin(0,0,0,0),
+        legend.box.margin=margin(0,-10,0,-10),
+        
+        legend.key.size = unit(1.5, 'lines'),
+        plot.title = element_text(hjust=0.5, size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+print(diff_p)
+```
+
+### Rat depth vs. Rat distance
+##### Distance calculated as total branch length separating nodes in Emily's tree.
+
+```{r fig4, out.width="100%", fig.align = "center", echo=FALSE, warning=FALSE}
+
+diff_p = ggplot(in_data, aes(x=rat.dist, y=rat.depth)) +
+  geom_smooth(method="glm", alpha=0, fullrange=T, color="#666666") +
+  geom_point(size=2, alpha=0.6, color="#db6d00") +
+
+  labs(x="Rat distance", y="Rat depth") +
+  
+  #scale_color_manual(name="Mapped to: ", values=c("Mouse"="#333333", "Rat"="#db6d00")) +
+  
+  theme_classic() +
+  guides(colour = guide_legend(override.aes = list(size=4))) +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="bottom",
+        legend.text=element_text(size=14),
+        #legend.spacing.x=unit(1, 'cm'),
+        legend.title=element_text(size=14, face="bold"),
+        legend.margin=margin(0,0,0,0),
+        legend.box.margin=margin(0,-10,0,-10),
+        
+        legend.key.size = unit(1.5, 'lines'),
+        plot.title = element_text(hjust=0.5, size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+print(diff_p)
+```
+
+### Total reads vs. average read depth (HiSeq only)
+
+```{r fig5, out.width="100%", fig.align = "center", echo=FALSE, warning=FALSE}
 #####################
 # # reads vs depth (hiseq only)
 #####################

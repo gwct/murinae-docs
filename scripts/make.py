@@ -8,13 +8,14 @@ print("# Script call: " + " ".join(sys.argv) + "\n----------");
 parser = argparse.ArgumentParser(description="Gets stats from a bunch of abyss assemblies.");
 parser.add_argument("--all", dest="all", help="Build all pages", action="store_true", default=False);
 parser.add_argument("--index", dest="index", help="Without --all: build index.html. With --all: exlude index.html", action="store_true", default=False);
-parser.add_argument("--assemblystats", dest="assemblystats", help="Without --all: build assembly_stats.html. With --all: exlude assembly_stats.html", action="store_true", default=False);
 parser.add_argument("--notes", dest="notes", help="Without --all: build notes.html. With --all: exlude notes.html", action="store_true", default=False);
 parser.add_argument("--people", dest="people", help="Without --all: build people.html. With --all: exlude people.html", action="store_true", default=False);
 parser.add_argument("--samples", dest="samples", help="Without --all: build samples.html. With --all: exlude samples.html", action="store_true", default=False);
 parser.add_argument("--summary", dest="summary", help="Without --all: build summary.html. With --all: exlude summary.html", action="store_true", default=False);
 parser.add_argument("--summary48", dest="summary48", help="Without --all: build summary_48.html. With --all: exlude summary_48.html", action="store_true", default=False);
 parser.add_argument("--workflows", dest="workflows", help="Without --all: build workflows.html. With --all: exlude workflows.html", action="store_true", default=False);
+parser.add_argument("--assemblystats", dest="assemblystats", help="Without --all: build assembly_stats.html. With --all: exlude assembly_stats.html", action="store_true", default=False);
+parser.add_argument("--mappingstats", dest="mappingstats", help="Without --all: build mapping_stats.html. With --all: exlude mapping_stats.html", action="store_true", default=False);
 args = parser.parse_args();
 # Input options.
 
@@ -23,13 +24,14 @@ os.chdir("generators");
 
 pages = {
     'index' : args.index,
-    'assemblystats' : args.assemblystats,
     'notes' : args.notes,
     'people' : args.people,
     'samples' : args.samples,
     'summary' : args.summary,
     'summary48' : args.summary48,
-    'workflows' : args.workflows
+    'workflows' : args.workflows,
+    'assemblystats' : args.assemblystats,
+    'mappingstats' : args.mappingstats
 }
 
 if args.all:
@@ -58,6 +60,9 @@ if pages['workflows']:
 
 if pages['assemblystats']:
     os.system("Rscript assembly_stats_generator.r");
+
+if pages['mappingstats']:
+    os.system("Rscript mapping_stats_generator.r");
 
 print("----------\nDone!");
 

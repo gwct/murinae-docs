@@ -35,8 +35,6 @@ html_template = """
                     <table id="node_table">
                         {node_table}
                     </table>
-                </div>
-
                 
 			</div>
 		</div>
@@ -63,7 +61,7 @@ outfilename = "../../samples.html";
 
 first = True;
 node_table = "";
-include_col = ["Subfamily", "Tribe", "Division", "Genus", "Species", "Geographic Region", "Exons", "Exons Status", "Exome",  "Exome Status", "Genome", "Genome Status"];
+include_col = ["Tribe", "Division", "Genus", "Species", "Geographic Region", "Exons", "Exons Status", "Exome",  "Exome Status", "Genome", "Genome Status"];
 include_ind = [];
 
 exons, exomes, genomes = 0,0,0;
@@ -107,7 +105,6 @@ for line in open(infilename):
         first = False;
     else:
         node_table += "</tr>\n";
-node_table += "\t\t</table>\n";
 with open(outfilename, "w") as outfile:
     outfile.write(html_template.format(head=head, nav=nav, node_table=node_table, page_title=page_title, csvdatafile=infilename, footer=footer));
 

@@ -1,0 +1,237 @@
+---
+#title: "Exome assembly stats"
+#author: "gwct"
+#date: "11/21/2019"
+output: 
+  html_document:
+    includes:
+      in_header: '../html-chunks/rmd_header.html'
+    df_print: paged
+    code_folding: hide
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+
+targets = 203198
+target_avg_len = 267.5448577249776
+target_min_len = 100
+target_total_len = 54364580
+
+tiles = 470359
+tile_avg_len = 109.8747
+tile_min_len = 57
+tile_total_len = 51679441
+# Target and tile info
+
+htmltools::includeHTML("../html-chunks/nav.html")
+
+```
+
+# Exome mapping stats
+
+```{r readdata, echo=FALSE, warning=FALSE}
+unfiltered_data = read.csv("../../data/exome-48-read-stats.csv", header=TRUE)
+filtered_data = read.csv("../../data/exome-48-read-stats-filtered.csv", header=TRUE)
+
+unfiltered_data$total.reads = rowSums(unfiltered_data[,c(4,7,10,13,16,19,22)], na.rm=T)
+filtered_data$total.reads = rowSums(filtered_data[,c(4,7,10,13,16,19,22)], na.rm=T)
+
+unfiltered_data$avg.read.len = rowMeans(unfiltered_data[,c(5,8,11,14,17,20,23)], na.rm=T)
+filtered_data$avg.read.len = rowMeans(filtered_data[,c(5,8,11,14,17,20,23)], na.rm=T)
+
+in_data = data.frame(
+  "species"=unfiltered_data$Abbr,
+  "unfiltered.reads"=unfiltered_data$total.reads,
+  "unfiltered.avg.read.len"=unfiltered_data$avg.read.len,
+  "filtered.reads"=filtered_data$total.reads,
+  "filtered.avg.read.len"=filtered_data$avg.read.len,
+  "mouse.reads"=filtered_data$reads.mapped.mouse,
+  "mouse.depth"=filtered_data$read.depth.mouse.targets,
+  "rat.reads"=filtered_data$reads.mapped.rat,
+  "rat.depth"=filtered_data$read.depth.rat.targets,
+  "hiseq.only"=filtered_data$hiseq.only)
+
+
+in_data$unfiltered.cov = (in_data$unfiltered.reads * in_data$unfiltered.avg.read.len) / target_total_len
+in_data$filtered.cov = (in_data$filtered.reads * in_data$filtered.avg.read.len) / target_total_len
+
+in_data_hiseq = subset(in_data, hiseq.only=="Y")
+```
+
+### Total reads vs. mapped reads
+
+```{r fig1, out.width="100%", fig.align = "center", echo=FALSE, warning=FALSE}
+#####################
+# # reads vs mapped reads
+#####################
+
+mouse_mapped_lm = lm(in_data$mouse.reads ~ in_data$unfiltered.reads)
+rat_mapped_lm = lm(in_data$rat.reads ~ in_data$unfiltered.reads)
+
+mapped_p = ggplot(in_data, aes(x=unfiltered.reads, y=mouse.reads)) +
+  geom_segment(x=in_data$unfiltered.reads, y=in_data$mouse.reads, xend=in_data$unfiltered.reads, yend=in_data$rat.reads) +
+  geom_smooth(method="glm", alpha=0, fullrange=T, color="#666666") +
+  geom_smooth(aes(x=unfiltered.reads, y=rat.reads), method="glm", alpha=0, fullrange=T, color="#ff9933") +
+  geom_point(aes(color="Mouse"), size=2, alpha=0.6) +
+  geom_point(aes(x=unfiltered.reads, y=rat.reads, color="Rat"), size=2, alpha=0.6) +
+
+  scale_x_continuous(expand=c(0,0), limits=c(1e7,8.5e7)) +
+  labs(x="# Unfiltered reads", y="# Reads mapped") +
+  
+  scale_color_manual(name="Mapped to: ", values=c("Mouse"="#333333", "Rat"="#db6d00")) +
+  
+  theme_classic() +
+  guides(colour = guide_legend(override.aes = list(size=4))) +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="bottom",
+        legend.text=element_text(size=14),
+        #legend.spacing.x=unit(1, 'cm'),
+        legend.title=element_text(size=14, face="bold"),
+        legend.margin=margin(0,0,0,0),
+        legend.box.margin=margin(0,-10,0,-10),
+        legend.key.size = unit(1.5, 'lines'),
+        plot.title = element_text(hjust=0.5, size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+print(mapped_p)
+```
+
+### Total reads vs. average read depth
+
+```{r fig2, out.width="100%", fig.align = "center", echo=FALSE, warning=FALSE}
+#####################
+# # reads vs depth
+#####################
+mouse_depth_lm = lm(in_data$mouse.depth ~ in_data$unfiltered.reads)
+rat_depth_lm = lm(in_data$rat.depth ~ in_data$unfiltered.reads)
+
+target_depth = 30
+
+exp_reads_mouse = (target_depth - coefficients(mouse_depth_lm)[1]) / coefficients(mouse_depth_lm)[2]
+mouse_label_pos = exp_reads_mouse - 4000000
+
+exp_reads_rat = (target_depth - coefficients(rat_depth_lm)[1]) / coefficients(rat_depth_lm)[2]
+rat_label_pos = exp_reads_rat + 4000000
+
+in_data$depth.diff = in_data$mouse.depth - in_data$rat.depth
+
+depth_p = ggplot(in_data, aes(x=unfiltered.reads, y=mouse.depth)) +
+  geom_segment(x=in_data$unfiltered.reads, y=in_data$mouse.depth, xend=in_data$unfiltered.reads, yend=in_data$rat.depth) +
+  geom_smooth(method="glm", alpha=0, fullrange=T, color="#666666") +
+  geom_smooth(aes(x=unfiltered.reads, y=rat.depth), method="glm", alpha=0, fullrange=T, color="#ff9933") +
+  geom_point(aes(color="Mouse"), size=2, alpha=0.6) +
+  geom_point(aes(x=unfiltered.reads, y=rat.depth, color="Rat"), size=2, alpha=0.6) +
+  
+  geom_segment(x=0,y=target_depth,xend=exp_reads_rat,yend=target_depth, color="#ff9933") +
+  geom_segment(x=exp_reads_rat,y=target_depth,xend=exp_reads_rat,yend=0, color="#ff9933") +
+  
+  geom_segment(x=0,y=target_depth,xend=exp_reads_mouse,yend=target_depth, color="#666666") +
+  geom_segment(x=exp_reads_mouse,y=target_depth,xend=exp_reads_mouse,yend=0, color="#666666") +
+  
+  annotate("text", x=mouse_label_pos, y=5, label=round(exp_reads_mouse), color="#666666") +
+  annotate("text", x=rat_label_pos, y=5, label=round(exp_reads_rat), color="#ff9933") +
+  
+  scale_x_continuous(expand=c(0,0), limits=c(1e7,8.5e7)) +
+  labs(x="# Unfiltered reads", y="Avg. read depth") +
+  
+  scale_color_manual(name="Mapped to: ", values=c("Mouse"="#333333", "Rat"="#db6d00")) +
+  
+  theme_classic() +
+  guides(colour = guide_legend(override.aes = list(size=4))) +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="bottom",
+        legend.text=element_text(size=14),
+        #legend.spacing.x=unit(1, 'cm'),
+        legend.title=element_text(size=14, face="bold"),
+        legend.margin=margin(0,0,0,0),
+        legend.box.margin=margin(0,-10,0,-10),
+        
+        legend.key.size = unit(1.5, 'lines'),
+        plot.title = element_text(hjust=0.5, size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+print(depth_p)
+```
+
+### Total reads vs. average read depth (HiSeq only)
+
+```{r fig3, out.width="100%", fig.align = "center", echo=FALSE, warning=FALSE}
+#####################
+# # reads vs depth (hiseq only)
+#####################
+mouse_depth_lm = lm(in_data_hiseq$mouse.depth ~ in_data_hiseq$unfiltered.reads)
+rat_depth_lm = lm(in_data_hiseq$rat.depth ~ in_data_hiseq$unfiltered.reads)
+
+target_depth = 30
+
+exp_reads_mouse = (target_depth - coefficients(mouse_depth_lm)[1]) / coefficients(mouse_depth_lm)[2]
+mouse_label_pos = exp_reads_mouse - 4000000
+
+exp_reads_rat = (target_depth - coefficients(rat_depth_lm)[1]) / coefficients(rat_depth_lm)[2]
+rat_label_pos = exp_reads_rat + 4000000
+
+in_data_hiseq$depth.diff = in_data_hiseq$mouse.depth - in_data_hiseq$rat.depth
+
+depth_p = ggplot(in_data_hiseq, aes(x=unfiltered.reads, y=mouse.depth)) +
+  geom_segment(x=in_data_hiseq$unfiltered.reads, y=in_data_hiseq$mouse.depth, xend=in_data_hiseq$unfiltered.reads, yend=in_data_hiseq$rat.depth) +
+  geom_smooth(method="glm", alpha=0, fullrange=T, color="#666666") +
+  geom_smooth(aes(x=unfiltered.reads, y=rat.depth), method="glm", alpha=0, fullrange=T, color="#ff9933") +
+  geom_point(aes(color="Mouse"), size=2, alpha=0.6) +
+  geom_point(aes(x=unfiltered.reads, y=rat.depth, color="Rat"), size=2, alpha=0.6) +
+  
+  geom_segment(x=0,y=target_depth,xend=exp_reads_rat,yend=target_depth, color="#ff9933") +
+  geom_segment(x=exp_reads_rat,y=target_depth,xend=exp_reads_rat,yend=0, color="#ff9933") +
+  
+  geom_segment(x=0,y=target_depth,xend=exp_reads_mouse,yend=target_depth, color="#666666") +
+  geom_segment(x=exp_reads_mouse,y=target_depth,xend=exp_reads_mouse,yend=0, color="#666666") +
+  
+  annotate("text", x=mouse_label_pos, y=5, label=round(exp_reads_mouse), color="#666666") +
+  annotate("text", x=rat_label_pos, y=5, label=round(exp_reads_rat), color="#ff9933") +
+  
+  scale_x_continuous(expand=c(0,0), limits=c(1e7,8.5e7)) +
+  labs(x="# Unfiltered reads", y="Avg. read depth") +
+  
+  scale_color_manual(name="Mapped to: ", values=c("Mouse"="#333333", "Rat"="#db6d00")) +
+  
+  theme_classic() +
+  guides(colour = guide_legend(override.aes = list(size=4))) +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="bottom",
+        legend.text=element_text(size=14),
+        #legend.spacing.x=unit(1, 'cm'),
+        legend.title=element_text(size=14, face="bold"),
+        legend.margin=margin(0,0,0,0),
+        legend.box.margin=margin(0,-10,0,-10),
+        
+        legend.key.size = unit(1.5, 'lines'),
+        plot.title = element_text(hjust=0.5, size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+print(depth_p)
+```
+
+
+```{r footer}
+htmltools::includeHTML("../html-chunks/footer.html")
+```

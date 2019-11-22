@@ -37,7 +37,7 @@ html_template = """
                         <li><a href="data/multiqc/hiseq2500-paired.html" target="_blank">HiSeq2500 paired</a></li>
                     </ul>
                     <p><h4><a href="assembly_stats.html">Assembly with Abyss and Spades</a></h4></p>
-                    <p><h4>Mapping to Mouse and Rat reference genomes</p></h4>
+                    <p><h4><a href="mapping_stats.html">Mapping to Mouse and Rat reference genomes</a></p></h4>
 
                     <h2>Sample summary table</h2>
                     

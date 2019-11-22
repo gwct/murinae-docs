@@ -15,15 +15,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(ggplot2)
 
-render_opt = F
-
 targets = 203198
 target_avg_len = 267.5448577249776
 target_min_len = 100
+target_total_len = 54364580
 
 tiles = 470359
 tile_avg_len = 109.8747
 tile_min_len = 57
+tile_total_len = 51679441
 # Target and tile info
 
 htmltools::includeHTML("../html-chunks/nav.html")
@@ -37,7 +37,7 @@ Comparison between Abyss and Spades assemblies for 48 exomes made up of a myriad
 ### Abyss
 
 ```{r fig1, out.width="100%", fig.align = "center"}
-abyss_data = read.csv("../../data/abyss-stats.csv", header=TRUE)
+abyss_data = read.csv("../../data/exome-48-abyss-stats.csv", header=TRUE)
 abyss_data$type = factor(abyss_data$type, levels=c("Unitig","Contig","Scaffold"), ordered=TRUE)
 
 ####################
@@ -112,7 +112,7 @@ print(len_p)
 ### Spades
 
 ```{r fig3, out.width="100%", fig.align = "center"}
-spades_data = read.csv("../../data/spades-stats.csv", header=TRUE)
+spades_data = read.csv("../../data/exome-48-spades-stats.csv", header=TRUE)
 spades_data$type = factor(spades_data$type, levels=c("Contig","Scaffold"), ordered=TRUE)
 
 ####################

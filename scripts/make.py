@@ -14,6 +14,7 @@ parser.add_argument("--samples", dest="samples", help="Without --all: build samp
 parser.add_argument("--summary", dest="summary", help="Without --all: build summary.html. With --all: exlude summary.html", action="store_true", default=False);
 parser.add_argument("--summary48", dest="summary48", help="Without --all: build summary_48.html. With --all: exlude summary_48.html", action="store_true", default=False);
 parser.add_argument("--workflows", dest="workflows", help="Without --all: build workflows.html. With --all: exlude workflows.html", action="store_true", default=False);
+parser.add_argument("--wgs", dest="wgs", help="Without --all: build wgs.html. With --all: exlude wgs.html", action="store_true", default=False);
 parser.add_argument("--assemblystats", dest="assemblystats", help="Without --all: build assembly_stats.html. With --all: exlude assembly_stats.html", action="store_true", default=False);
 parser.add_argument("--mappingstats", dest="mappingstats", help="Without --all: build mapping_stats.html. With --all: exlude mapping_stats.html", action="store_true", default=False);
 args = parser.parse_args();
@@ -30,6 +31,7 @@ pages = {
     'summary' : args.summary,
     'summary48' : args.summary48,
     'workflows' : args.workflows,
+    'wgs' : args.wgs,
     'assemblystats' : args.assemblystats,
     'mappingstats' : args.mappingstats
 }
@@ -57,6 +59,9 @@ if pages['summary48']:
 
 if pages['workflows']:
     os.system("python workflows_generator.py");
+
+if pages['wgs']:
+    os.system("python wgs_generator.py");
 
 if pages['assemblystats']:
     os.system("Rscript assembly_stats_generator.r");

@@ -25,8 +25,8 @@ html_template = """
 			<div id="main_content">
                 <h1>{page_title}</h1>
                 
-                <img class="pure-img" id="logo_main" src="figs/proposed-wgs.png">
-                <center>Orange text indicates proposed species for WGS. Clade colors represent geographical regions (see Kevin's map).</center>
+                <img class="pure-img" id="logo_main" src="figs/nih-fig2.png">
+                <center>Bold text indicates proposed species for WGS. Clade colors represent geographical regions (see Kevin's map).</center>
 			</div>
 		</div>
 		<div class="pure-u-3-24" id="margin"></div>

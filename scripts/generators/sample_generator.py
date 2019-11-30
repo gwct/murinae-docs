@@ -47,17 +47,19 @@ html_template = """
 ######################
 # Main block
 ######################
-print("Generating samples.html...");
+######################
+pagefile = "samples.html";
+print("Generating " + pagefile + "...");
 title = "Murine sampling"
 
 head = RC.readHead(title);
-nav = RC.readNav();
+nav = RC.readNav(pagefile);
 footer = RC.readFooter();
 
 page_title = "Complete Murine sampling"
 
 infilename = "../../data/2019-Muridae-NSF-Genomics-Status-11.19.19.csv";
-outfilename = "../../samples.html";
+outfilename = "../../" + pagefile;
 
 first = True;
 node_table = "";

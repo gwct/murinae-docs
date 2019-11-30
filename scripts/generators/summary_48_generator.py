@@ -68,17 +68,18 @@ html_template = """
 ######################
 # Main block
 ######################
-print("Generating summary_48.html...");
+pagefile = "summary_48.html";
+print("Generating " + pagefile + "...");
 title = "48 exome summary"
 
 head = RC.readHead(title);
-nav = RC.readNav();
+nav = RC.readNav(pagefile);
 footer = RC.readFooter();
 
 page_title = "Summary of 48 exome samples"
 
 infilename = "../../data/summary-48-exomes.csv";
-outfilename = "../../summary_48.html";
+outfilename = "../../" + pagefile;
 
 first = True;
 node_table = "";

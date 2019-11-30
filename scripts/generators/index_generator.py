@@ -37,16 +37,17 @@ html_template = """
 ######################
 # Main block
 ######################
-print("Generating index.html...");
+pagefile = "index.html";
+print("Generating " + pagefile + "...");
 title = "Murinae"
 
 head = RC.readHead(title);
-nav = RC.readNav();
+nav = RC.readNav(pagefile);
 footer = RC.readFooter();
 
 page_title = "Murine molecular evolution";
 
-outfilename = "../../index.html";
+outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
     outfile.write(html_template.format(head=head, nav=nav, page_title=page_title, footer=footer));

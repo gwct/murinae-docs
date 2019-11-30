@@ -27,7 +27,6 @@ tile_total_len = 51679441
 # Target and tile info
 
 htmltools::includeHTML("../html-chunks/nav.html")
-
 ```
 
 # Exome assembly stats
@@ -188,5 +187,6 @@ print(len_p)
 
 
 ```{r footer}
-htmltools::includeHTML("../html-chunks/footer.html")
+cat("Page last updated:", format(Sys.time(), "%m/%d/%Y %H:%M:%S %Z"))
+htmltools::includeHTML("../html-chunks/rmd_footer.html")
 ```

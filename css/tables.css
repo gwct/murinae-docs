@@ -1,6 +1,7 @@
 #node_table_cont {
     background-color:#fff;
     padding:20px 50px 20px 50px;
+    overflow-y:auto;
 }
 
 /* @media (max-width: 960px) {

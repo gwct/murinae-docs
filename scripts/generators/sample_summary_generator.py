@@ -51,17 +51,18 @@ html_template = """
 ######################
 # Main block
 ######################
-print("Generating summary.html...");
+pagefile = "summary.html";
+print("Generating " + pagefile + "...");
 title = "Murine sample summary"
 
 head = RC.readHead(title);
-nav = RC.readNav();
+nav = RC.readNav(pagefile);
 footer = RC.readFooter();
 
 page_title = "Summary of Murine sampling"
 
 infilename = "../../data/sample-summary.csv";
-outfilename = "../../summary.html";
+outfilename = "../../" + pagefile;
 
 first = True;
 node_table = "";

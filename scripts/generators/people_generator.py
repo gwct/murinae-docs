@@ -50,14 +50,15 @@ html_template = """
 ######################
 # Main block
 ######################
-print("Generating people.html...");
+pagefile = "people.html";
+print("Generating " + pagefile + "...");
 title = "People"
 
 head = RC.readHead(title);
-nav = RC.readNav();
+nav = RC.readNav(pagefile);
 footer = RC.readFooter();
 
-outfilename = "../../people.html";
+outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
     outfile.write(html_template.format(head=head, nav=nav, footer=footer));

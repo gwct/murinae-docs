@@ -309,5 +309,6 @@ print(depth_p)
 
 
 ```{r footer}
-htmltools::includeHTML("../html-chunks/footer.html")
+cat("Page last updated:", format(Sys.time(), "%m/%d/%Y %H:%M:%S %Z"))
+htmltools::includeHTML("../html-chunks/rmd_footer.html")
 ```

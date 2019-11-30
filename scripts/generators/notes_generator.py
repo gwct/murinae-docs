@@ -96,14 +96,15 @@ html_template = """
 ######################
 # Main block
 ######################
-print("Generating notes.html...");
+pagefile = "notes.html";
+print("Generating " + pagefile + "...");
 title = "Notes"
 
 head = RC.readHead(title);
-nav = RC.readNav();
+nav = RC.readNav(pagefile);
 footer = RC.readFooter();
 
-outfilename = "../../notes.html";
+outfilename = "../../" + pagefile;
 
 with open(outfilename, "w") as outfile:
     outfile.write(html_template.format(head=head, nav=nav, footer=footer));

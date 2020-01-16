@@ -73,7 +73,7 @@ page_title = "Summary of 156 exome samples"
 infilename = "../../data/summary-exomes.csv";
 outfilename = "../../" + pagefile;
 
-to_include = ['Genus', 'Species', 'Sequencing platform', 'Total reads', 'Avg read len', 'Total bases']
+to_include = ['Species', 'Sequencing platform', 'Total reads', 'Avg read len', 'Total bases']
 
 first = True;
 node_table = "";
@@ -95,6 +95,9 @@ for line in open(infilename):
                 node_table += "<th>" + line[x] + "</th>";
             else:
                 if line[x] != "NA":
+                    if x == 2:
+                        line[x] = "<em>" + line[1] + " " + line[2] + "</em>";
+
                     node_table += "<td>" + line[x] + "</td>";
                 else:
                     node_table += "<td></td>";

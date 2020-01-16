@@ -73,7 +73,7 @@ page_title = "Summary of 156 exome samples"
 infilename = "../../data/summary-exomes.csv";
 outfilename = "../../" + pagefile;
 
-to_include = ['Genus', 'Species', 'Total reads', 'Avg read len', 'Total bases']
+to_include = ['Genus', 'Species', 'Sequencing platform', 'Total reads', 'Avg read len', 'Total bases']
 
 first = True;
 node_table = "";

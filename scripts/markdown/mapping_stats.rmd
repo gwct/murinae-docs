@@ -307,6 +307,72 @@ depth_p = ggplot(in_data_hiseq, aes(x=unfiltered.reads, y=mouse.depth)) +
 print(depth_p)
 ```
 
+### 164 Exomes
+```{r fig6, out.width="100%", fig.align = "center", echo=FALSE, warning=FALSE}
+new_data = read.csv("../../data/summary-exomes.csv", header=TRUE)
+new_data = new_data[!grepl("pos_ctrl", new_data$Label),]
+new_data$Batch = as.character(new_data$Batch)
+#mouse_depth_lm = lm(in_data$mouse.depth ~ in_data$unfiltered.reads)
+#rat_depth_lm = lm(in_data$rat.depth ~ in_data$unfiltered.reads)
+
+#target_depth = 30
+
+#exp_reads_mouse = (target_depth - coefficients(mouse_depth_lm)[1]) / coefficients(mouse_depth_lm)[2]
+#mouse_label_pos = exp_reads_mouse - 4000000
+
+#exp_reads_rat = (target_depth - coefficients(rat_depth_lm)[1]) / coefficients(rat_depth_lm)[2]
+#rat_label_pos = exp_reads_rat + 4000000
+
+#in_data$depth.diff = in_data$mouse.depth - in_data$rat.depth
+
+depth_p = ggplot(new_data, aes(x=Total.reads, y=Mouse.target.depth, color=Batch)) +
+  #geom_segment(x=in_data$unfiltered.reads, y=in_data$mouse.depth, xend=in_data$unfiltered.reads, yend=in_data$rat.depth) +
+  geom_smooth(method="glm", alpha=0, fullrange=T, color="#666666") +
+  #geom_smooth(aes(x=unfiltered.reads, y=rat.depth), method="glm", alpha=0, fullrange=T, color="#ff9933") +
+  geom_point(size=2, alpha=0.6) +
+  #geom_point(aes(x=unfiltered.reads, y=rat.depth, color="Rat"), size=2, alpha=0.6) +
+  
+  #geom_segment(x=0,y=target_depth,xend=exp_reads_rat,yend=target_depth, color="#ff9933") +
+  #geom_segment(x=exp_reads_rat,y=target_depth,xend=exp_reads_rat,yend=0, color="#ff9933") +
+  
+  #geom_segment(x=0,y=target_depth,xend=exp_reads_mouse,yend=target_depth, color="#666666") +
+  #geom_segment(x=exp_reads_mouse,y=target_depth,xend=exp_reads_mouse,yend=0, color="#666666") +
+  
+  #annotate("text", x=mouse_label_pos, y=5, label=round(exp_reads_mouse), color="#666666") +
+  #annotate("text", x=rat_label_pos, y=5, label=round(exp_reads_rat), color="#ff9933") +
+  
+  #scale_x_continuous(expand=c(0,0), limits=c(1e7,8.5e7)) +
+  labs(x="# Unfiltered reads", y="Avg. read depth") +
+  
+  scale_color_manual(values=c("1"="#333333", "2"="#333333", "3"="#333333", "4"="#db6d00", "5"="#333333")) +
+  #scale_color_gradient(low='#E1FA72', high='#F46FEE') +
+  theme_classic() +
+  guides(colour = guide_legend(override.aes = list(size=4))) +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="bottom",
+        legend.text=element_text(size=14),
+        #legend.spacing.x=unit(1, 'cm'),
+        legend.title=element_text(size=14, face="bold"),
+        legend.margin=margin(0,0,0,0),
+        legend.box.margin=margin(0,-10,0,-10),
+        
+        legend.key.size = unit(1.5, 'lines'),
+        plot.title = element_text(hjust=0.5, size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+print(depth_p)
+
+
+```
+
+
+
 
 ```{r footer}
 cat("Page last updated:", format(Sys.time(), "%m/%d/%Y %H:%M:%S %Z"))

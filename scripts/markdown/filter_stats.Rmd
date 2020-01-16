@@ -1,0 +1,86 @@
+---
+#title: "Read filtering stats"
+#author: "gwct"
+#date: "01/16/2020"
+output: 
+  html_document:
+    includes:
+      in_header: '../html-chunks/rmd_header.html'
+    df_print: paged
+    code_folding: hide
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+
+targets = 203198
+target_avg_len = 267.5448577249776
+target_min_len = 100
+target_total_len = 54364580
+
+tiles = 470359
+tile_avg_len = 109.8747
+tile_min_len = 57
+tile_total_len = 51679441
+# Target and tile info
+
+htmltools::includeHTML("../html-chunks/nav.html")
+
+```
+
+# Read filtering stats
+
+### Filter steps:
+
+0. Raw reads
+1. Adapter trimming with Fastp
+2. Decontamination
+3. Paired-end read merging
+4. Deduplication
+
+```{r readdata, echo=FALSE, warning=FALSE}
+new_data = read.csv("../../data/summary-exomes-long.csv", header=TRUE)
+new_data = new_data[!grepl("pos_ctrl", new_data$Label),]
+#new_data$Filter.step = as.character(new_data$Filter.step)
+```
+
+# Reads per filtering step
+
+```{r fig1, out.width="100%", fig.align = "center", echo=FALSE, warning=FALSE}
+#####################
+# # reads vs reads mapped to mouse, colored by sequencing batch
+#####################
+
+reads_p = ggplot(new_data, aes(x=Filter.step, y=Reads, color=Label)) +
+  geom_line() +
+  geom_point() +
+  theme_classic() +
+   theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="none",
+        legend.text=element_text(size=14),
+        #legend.spacing.x=unit(1, 'cm'),
+        legend.title=element_text(size=14, face="bold"),
+        legend.margin=margin(0,0,0,0),
+        legend.box.margin=margin(0,-10,0,-10),
+        
+        legend.key.size = unit(1.5, 'lines'),
+        plot.title = element_text(hjust=0.5, size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  ) 
+
+print(reads_p)
+```
+
+
+```{r footer}
+cat("Page last updated:", format(Sys.time(), "%m/%d/%Y %H:%M:%S %Z"))
+htmltools::includeHTML("../html-chunks/rmd_footer.html")
+```

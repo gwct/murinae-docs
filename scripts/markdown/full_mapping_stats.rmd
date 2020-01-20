@@ -214,9 +214,9 @@ cat("Slope", coef(depth_reg)[2], sep=" ")
 
 depth_reg = lm(new_data$Rat.target.depth ~ new_data$Total.reads)
 
-depth_p = ggplot(new_data, aes(x=Total.reads, y=Mouse.target.depth, color=Batch)) +
+depth_p = ggplot(new_data, aes(x=Total.reads, y=Rat.target.depth, color=Batch)) +
   geom_smooth(method="glm", alpha=0, fullrange=T, color="#666666") +
-  geom_smooth(data=by_library, aes(x=Total.reads, y=Mouse.target.depth), method="glm", alpha=0, fullrange=T, color="#666666", linetype="dashed") +
+  geom_smooth(data=by_library, aes(x=Total.reads, y=Rat.target.depth), method="glm", alpha=0, fullrange=T, color="#666666", linetype="dashed") +
   geom_point(size=2, alpha=0.6) +
   labs(x="# Unfiltered reads", y="Avg. read depth") +
   scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 24"),

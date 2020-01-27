@@ -14,7 +14,7 @@ parser.add_argument("--samples", dest="samples", help="Without --all: build samp
 parser.add_argument("--summary", dest="summary", help="Without --all: build summary.html. With --all: exlude summary.html", action="store_true", default=False);
 parser.add_argument("--summary48", dest="summary48", help="Without --all: build summary_48.html. With --all: exlude summary_48.html", action="store_true", default=False);
 parser.add_argument("--summary62", dest="summary62", help="Without --all: build summary_62.html. With --all: exlude summary_62.html", action="store_true", default=False);
-parser.add_argument("--summary156", dest="summary156", help="Without --all: build summary_156.html. With --all: exlude summary_156.html", action="store_true", default=False);
+parser.add_argument("--summary186", dest="summary186", help="Without --all: build summary_186.html. With --all: exlude summary_186.html", action="store_true", default=False);
 parser.add_argument("--workflows", dest="workflows", help="Without --all: build workflows.html. With --all: exlude workflows.html", action="store_true", default=False);
 parser.add_argument("--wgs", dest="wgs", help="Without --all: build wgs.html. With --all: exlude wgs.html", action="store_true", default=False);
 parser.add_argument("--assemblystats", dest="assemblystats", help="Without --all: build assembly_stats.html. With --all: exlude assembly_stats.html", action="store_true", default=False);
@@ -35,7 +35,7 @@ pages = {
     'summary' : args.summary,
     'summary48' : args.summary48,
     'summary62' : args.summary62,
-    'summary156' : args.summary156,
+    'summary186' : args.summary186,
     'workflows' : args.workflows,
     'wgs' : args.wgs,
     'assemblystats' : args.assemblystats,
@@ -68,8 +68,8 @@ if pages['summary48']:
 if pages['summary62']:
     os.system("python summary_62_generator.py");
 
-if pages['summary156']:
-    os.system("python summary_156_generator.py");    
+if pages['summary186']:
+    os.system("python summary_186_generator.py");    
 
 if pages['workflows']:
     os.system("python workflows_generator.py");

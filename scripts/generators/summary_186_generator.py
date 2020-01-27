@@ -60,15 +60,15 @@ html_template = """
 ######################
 # Main block
 ######################
-pagefile = "summary_156.html";
+pagefile = "summary_186.html";
 print("Generating " + pagefile + "...");
-title = "156 exome summary"
+title = "186 exome summary"
 
 head = RC.readHead(title);
 nav = RC.readNav(pagefile);
 footer = RC.readFooter();
 
-page_title = "Summary of 156 exome samples"
+page_title = "Summary of 186 exome samples"
 
 infilename = "../../data/summary-exomes.csv";
 outfilename = "../../" + pagefile;

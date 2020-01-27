@@ -52,7 +52,7 @@ mapped_p = ggplot(new_data, aes(x=Total.reads, y=Mouse.mapped.reads, color=Batch
   geom_smooth(method="glm", alpha=0, fullrange=T, color="#666666") +
   geom_point(size=2, alpha=0.6) +
   labs(x="# Unfiltered reads", y="# Reads mapped") +
-  scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 24"),
+  scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 46"),
                      values=c("#920000", "#333333", "#006ddb", "#db6d00", "#b66dff")) +
   
   theme_classic() +
@@ -91,7 +91,7 @@ mapped_p = ggplot(new_data, aes(x=Total.reads, y=Rat.mapped.reads, color=Batch))
   geom_smooth(method="glm", alpha=0, fullrange=T, color="#666666") +
   geom_point(size=2, alpha=0.6) +
   labs(x="# Unfiltered reads", y="# Reads mapped") +
-  scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 24"),
+  scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 46"),
                      values=c("#920000", "#333333", "#006ddb", "#db6d00", "#b66dff")) +
   
   theme_classic() +
@@ -176,7 +176,7 @@ depth_p = ggplot(new_data, aes(x=Total.reads, y=Mouse.target.depth, color=Batch)
   geom_smooth(data=by_library, aes(x=Total.reads, y=Mouse.target.depth), method="glm", alpha=0, fullrange=T, color="#666666", linetype="dashed") +
   geom_point(size=2, alpha=0.6) +
   labs(x="# Unfiltered reads", y="Avg. read depth") +
-  scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 24"),
+  scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 46"),
                      values=c("#920000", "#333333", "#006ddb", "#db6d00", "#b66dff")) +
   theme_classic() +
   guides(colour = guide_legend(override.aes = list(size=4))) +
@@ -219,7 +219,7 @@ depth_p = ggplot(new_data, aes(x=Total.reads, y=Rat.target.depth, color=Batch)) 
   geom_smooth(data=by_library, aes(x=Total.reads, y=Rat.target.depth), method="glm", alpha=0, fullrange=T, color="#666666", linetype="dashed") +
   geom_point(size=2, alpha=0.6) +
   labs(x="# Unfiltered reads", y="Avg. read depth") +
-  scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 24"),
+  scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 46"),
                      values=c("#920000", "#333333", "#006ddb", "#db6d00", "#b66dff")) +
   theme_classic() +
   guides(colour = guide_legend(override.aes = list(size=4))) +
@@ -332,6 +332,43 @@ print(depth_p)
 cat("Slope", coef(depth_reg_new)[2], sep=" ")
 ```
 
+---
+
+## Read depth (mapped to mouse) by library prep (70 new samples only)
+
+```{r fig8, out.width="100%", fig.align = "center", warning=FALSE}
+#####################
+# # read depth to mouse, colored by library prep, 70 new samples only
+#####################
+depth_bp = ggplot(by_library, aes(x=Prep, y=Mouse.target.depth, fill=Prep)) +
+  geom_boxplot(outlier.shape=NA) + 
+  geom_jitter(width=0.1, size=2, alpha=0.6) +
+  labs(x="Library prep", y="Avg. read depth") +
+  scale_fill_manual(labels=c("1", "2", "3"),
+                     values=c("#ff6db6", "#24ff24", "#009292"),
+                     na.translate=FALSE) +
+  theme_classic() +
+  guides(colour = guide_legend(override.aes = list(size=4))) +
+  theme(axis.text=element_text(size=12), 
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="none",
+        legend.text=element_text(size=14),
+        #legend.spacing.x=unit(1, 'cm'),
+        legend.title=element_text(size=14, face="bold"),
+        legend.margin=margin(0,0,0,0),
+        legend.box.margin=margin(0,-10,0,-10),
+        
+        legend.key.size = unit(1.5, 'lines'),
+        plot.title = element_text(hjust=0.5, size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+print(depth_bp)
+```
 
 ```{r footer}
 cat("Page last updated:", format(Sys.time(), "%m/%d/%Y %H:%M:%S %Z"))

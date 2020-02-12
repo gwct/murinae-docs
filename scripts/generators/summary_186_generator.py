@@ -72,6 +72,7 @@ page_title = "Summary of 186 exome samples"
 
 infilename = "../../data/summary-exomes.csv";
 outfilename = "../../" + pagefile;
+csvdatafile = "data/summary-exomes.csv"
 
 to_include = ['Species', 'Sequencing platform', 'Total reads', 'Avg read len', 'Total bases']
 
@@ -109,4 +110,4 @@ for line in open(infilename):
         node_table += "</tr>\n";
 node_table += "\t\t</table>\n";1
 with open(outfilename, "w") as outfile:
-    outfile.write(html_template.format(head=head, nav=nav, node_table=node_table, page_title=page_title, csvdatafile=infilename, footer=footer));
+    outfile.write(html_template.format(head=head, nav=nav, node_table=node_table, page_title=page_title, csvdatafile=csvdatafile, footer=footer));

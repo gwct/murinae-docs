@@ -2,7 +2,7 @@ import sys, os, argparse
 
 print()
 print("###### Build site pages ######");
-print("PYTHON VERSION: " + ".".join(map(str, sys.version_info[:3])))
+print("# PYTHON VERSION: " + ".".join(map(str, sys.version_info[:3])))
 print("# Script call: " + " ".join(sys.argv) + "\n----------");
 
 parser = argparse.ArgumentParser(description="Gets stats from a bunch of abyss assemblies.");
@@ -18,6 +18,7 @@ parser.add_argument("--summary186", dest="summary186", help="Without --all: buil
 parser.add_argument("--workflows", dest="workflows", help="Without --all: build workflows.html. With --all: exlude workflows.html", action="store_true", default=False);
 parser.add_argument("--wgs", dest="wgs", help="Without --all: build wgs.html. With --all: exlude wgs.html", action="store_true", default=False);
 parser.add_argument("--assemblystats", dest="assemblystats", help="Without --all: build assembly_stats.html. With --all: exlude assembly_stats.html", action="store_true", default=False);
+parser.add_argument("--fullassemblystats", dest="fullassemblystats", help="Without --all: build assembly_stats.html. With --all: exlude full_assembly_stats.html", action="store_true", default=False);
 parser.add_argument("--mappingstats", dest="mappingstats", help="Without --all: build mapping_stats.html. With --all: exlude mapping_stats.html", action="store_true", default=False);
 parser.add_argument("--fullmappingstats", dest="fullmappingstats", help="Without --all: build full_mapping_stats.html. With --all: exlude full_mapping_stats.html", action="store_true", default=False);
 parser.add_argument("--filterstats", dest="filterstats", help="Without --all: build fiter_stats.html. With --all: exlude filter_stats.html", action="store_true", default=False);
@@ -39,6 +40,7 @@ pages = {
     'workflows' : args.workflows,
     'wgs' : args.wgs,
     'assemblystats' : args.assemblystats,
+    'fullassemblystats' : args.fullassemblystats,
     'mappingstats' : args.mappingstats,
     'fullmappingstats' : args.fullmappingstats,
     'filterstats' : args.filterstats
@@ -79,6 +81,9 @@ if pages['wgs']:
 
 if pages['assemblystats']:
     os.system("Rscript assembly_stats_generator.r");
+
+if pages['fullassemblystats']:
+    os.system("Rscript full_assembly_stats_generator.r");
 
 if pages['mappingstats']:
     os.system("Rscript mapping_stats_generator.r");

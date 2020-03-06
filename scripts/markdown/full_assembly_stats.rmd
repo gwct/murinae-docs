@@ -1,0 +1,202 @@
+---
+#title: "Exome assembly stats"
+#author: "gwct"
+#date: "11/21/2019"
+output: 
+  html_document:
+    includes:
+      in_header: '../html-chunks/rmd_header.html'
+    df_print: paged
+    code_folding: hide
+---
+
+```{r setup, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(ggbeeswarm)
+
+targets = 203198
+target_avg_len = 267.5448577249776
+target_min_len = 100
+target_total_len = 54364580
+
+tiles = 470359
+tile_avg_len = 109.8747
+tile_min_len = 57
+tile_total_len = 51679441
+# Target and tile info
+
+htmltools::includeHTML("../html-chunks/nav.html")
+```
+
+# Exome assembly stats with Spades
+
+```{r fig1, out.width="100%", fig.align="center"}
+spades_data = read.csv("../../data/exome-spades-stats.csv", header=TRUE)
+spades_data = spades_data[!grepl("Mus pos_ctrl", spades_data$Species),]
+spades_data$type = factor(spades_data$type, levels=c("Contig","Scaffold"), ordered=TRUE)
+spades_data$batch = as.character(spades_data$batch)
+spades_scaffs = subset(spades_data, type == "Scaffold")
+
+####################
+# Spades contig count distributions by batch
+scaff_batch_p = ggplot(spades_scaffs, aes(x=batch, y=count, fill=batch)) +
+  geom_hline(yintercept=targets, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=tiles, linetype=2, size=1, color="#9494b8") +
+  geom_violin(width=1, color="#666666", size=0.3) +
+  geom_quasirandom(size=0.75, alpha=0.6, width=0.15, color="#999999") +
+  scale_fill_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 46"),
+                     values=c("#920000", "#333333", "#006ddb", "#db6d00", "#b66dff")) +
+  annotate("text", x=0.7, y=targets-10000, label="# targets", color="#666666", size=4) +
+  annotate("text", x=0.6, y=tiles-10000, label="# tiles", color="#9494b8", size=4) +
+  #ggtitle("Spades assembly counts") +
+  labs(x="Sequencing batch", y="# Scaffolds") +
+  scale_x_discrete(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 46")) +
+  theme_classic() +
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="none",
+        legend.key.width = unit(0.75,  unit = "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        #legend.title = element_blank(),
+        legend.text=element_text(size=12),
+        plot.title = element_text(size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+
+print(scaff_batch_p)
+```
+
+
+```{r fig2, out.width="100%", fig.align="center", eval=FALSE}
+####################
+# Spades contig count distributions, contigs vs scaffolds
+contig_p = ggplot(spades_data, aes(x=type, y=count, fill=type, color=batch)) +
+  geom_hline(yintercept=targets, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=tiles, linetype=2, size=1, color="#9494b8") +
+  #geom_boxplot(outlier.colour="transparent", color="#666666", size=0.3) +
+  #geom_point(size=2, position=position_jitterdodge() , alpha=0.4, color="#999999") +
+  geom_violin(width=0.75, color="#666666", size=0.3) +
+  geom_point(size=2, position=position_jitterdodge(jitter.width=0.5) , alpha=0.4) +
+  #geom_quasirandom(aes(color=batch), alpha=0.2, width=0.2, color="#333333") +
+  scale_color_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 46"),
+                     values=c("#920000", "#333333", "#006ddb", "#db6d00", "#b66dff")) +
+  annotate("text", x=0.6, y=targets-10000, label="# targets", color="#666666", size=4) +
+  annotate("text", x=0.6, y=tiles-10000, label="# tiles", color="#9494b8", size=4) +
+  ggtitle("Spades assembly counts") +
+  labs(x="", y="# Contigs") +
+  scale_fill_manual(name="Assembly level", labels=c("Contig","Scaffold"), values=c("#ffcd00","#cc1c00")) +
+  theme_classic() +
+  theme(axis.text=element_text(size=12),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="right",
+        legend.key.width = unit(0.75,  unit = "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        #legend.title = element_blank(),
+        legend.text=element_text(size=12),
+        plot.title = element_text(size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+
+print(contig_p)
+```
+
+```{r fig3, out.width="100%", fig.align = "center"}
+####################
+# Spades length distributions, by batch
+len_batch_p = ggplot(spades_scaffs, aes(x=batch, y=avg.len, fill=batch)) +
+  geom_hline(yintercept=target_avg_len, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=target_min_len, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=tile_avg_len, linetype=2, size=1, color="#9494b8") +
+  geom_hline(yintercept=tile_min_len, linetype=2, size=1, color="#9494b8") +
+  geom_violin(width=1, color="#666666", size=0.3) +
+  geom_quasirandom(size=1, alpha=0.6, width=0.15, color="#999999") +
+  scale_fill_manual(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 46"),
+                     values=c("#920000", "#333333", "#006ddb", "#db6d00", "#b66dff")) +
+  annotate("text", x=0.85, y=target_avg_len-25, label="Avg. target len", color="#666666", size=4) +
+  annotate("text", x=0.85, y=target_min_len-20, label="Min. target len", color="#666666", size=4) +
+  annotate("text", x=5.0, y=tile_avg_len+35, label="Avg. tile len", color="#9494b8", size=4) +
+  annotate("text", x=5.0, y=tile_min_len-15, label="Min. tile len", color="#9494b8", size=4) +
+  #ggtitle("Spades assembly counts") +
+  labs(x="Sequencing batch", y="Avg. scaffold length") +
+  scale_x_discrete(labels=c("Original 40", "Rattus 8", "Mus 14", "New 70", "Aussie 46")) +
+  theme_classic() +
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="none",
+        legend.key.width = unit(0.75,  unit = "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        #legend.title = element_blank(),
+        legend.text=element_text(size=12),
+        plot.title = element_text(size=20),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+
+print(len_batch_p)
+```
+
+```{r fig4, out.width="100%", fig.align="center", eval=FALSE}
+####################
+# Spades length distributions, contigs vs scaffolds
+len_p = ggplot(spades_data, aes(x=type, y=avg.len, fill=type, color=type)) +
+  geom_hline(yintercept=target_avg_len, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=target_min_len, linetype=2, size=1, color="#666666") +
+  geom_hline(yintercept=tile_avg_len, linetype=2, size=1, color="#9494b8") +
+  geom_hline(yintercept=tile_min_len, linetype=2, size=1, color="#9494b8") +
+  #geom_boxplot(outlier.colour="transparent", color="#666666", size=0.3) +
+  geom_violin(width=0.75, color="#666666", size=0.3) +
+  geom_quasirandom(alpha = 0.2, width = 0.2, color="#333333") +
+  #geom_jitter(alpha=0.2, width=0.02) +
+  #geom_point(size=2, position=position_jitterdodge(jitter.width=1.5), alpha=0.4, color="#999999") +
+  annotate("text", x=0.65, y=target_avg_len-25, label="Avg. target len", color="#666666", size=4) +
+  annotate("text", x=0.65, y=target_min_len-20, label="Min. target len", color="#666666", size=4) +
+  annotate("text", x=2.4, y=tile_avg_len+35, label="Avg. tile len", color="#9494b8", size=4) +
+  annotate("text", x=2.4, y=tile_min_len-15, label="Min. tile len", color="#9494b8", size=4) +
+  ggtitle("Spades assembly lengths") +
+  labs(x="", y="Average length") +
+  scale_fill_manual(name="Assembly level", labels=c("Contig","Scaffold"), values=c("#ffcd00","#cc1c00")) +
+  theme_classic() +
+  theme(axis.text=element_text(size=12), 
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title=element_text(size=16), 
+        axis.title.y=element_text(margin=margin(t=0,r=10,b=0,l=0),color="black"), 
+        axis.title.x=element_text(margin=margin(t=10,r=0,b=0,l=0),color="black"),
+        axis.line=element_line(colour='#595959',size=0.75),
+        axis.ticks=element_line(colour="#595959",size = 1),
+        axis.ticks.length=unit(0.2,"cm"),
+        legend.position="right",
+        legend.key.width = unit(0.75,  unit = "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        #legend.title = element_blank(),
+        legend.text=element_text(size=12),
+        plot.title = element_text(size=18),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm")
+  )
+
+print(len_p)
+```
+
+
+```{r footer}
+cat("Page last updated:", format(Sys.time(), "%m/%d/%Y %H:%M:%S %Z"))
+htmltools::includeHTML("../html-chunks/rmd_footer.html")
+```
